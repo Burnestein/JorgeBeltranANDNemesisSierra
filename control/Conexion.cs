@@ -9,11 +9,11 @@ using System.Windows.Forms;
 namespace JorgeBeltranANDNemesisSierra.control
 {
     public class Conexion
-    {   // Probando cambios en Github
-        public const string servidor = "localhost"; //Nombre o ip del servidor de MySQL
-        public const string bd = "bdtiendita"; // Nombre de la base de datos
-        public const string usuario = "root"; //Usuario de acceso a MySQL
-        public const string password = ""; //Contraseña de usuario de acceso a MySQL
+    {
+        public static string servidor = "localhost"; //Nombre o ip del servidor de MySQL
+        public static string bd = "bdtiendita"; // Nombre de la base de datos
+        public static string usuario = "root"; //Usuario de acceso a MySQL
+        public static string password = ""; //Contraseña de usuario de acceso a MySQL
                                            //Crearemos la cadena de conexion concatenando las variables
         public string cadenaConexion = "Database=" + bd + "; Data Source=" + servidor + "; User Id=" + usuario + "; Password=" + password + "";
         public MySqlConnection con;
