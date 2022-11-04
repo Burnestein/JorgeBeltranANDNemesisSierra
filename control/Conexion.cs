@@ -9,7 +9,7 @@ using System.Windows.Forms;
 namespace JorgeBeltranANDNemesisSierra.control
 {
     public class Conexion
-    {
+    {   // Probando cambios en Github
         public const string servidor = "localhost"; //Nombre o ip del servidor de MySQL
         public const string bd = "bdtiendita"; // Nombre de la base de datos
         public const string usuario = "root"; //Usuario de acceso a MySQL
