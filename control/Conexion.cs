@@ -10,7 +10,6 @@ namespace JorgeBeltranANDNemesisSierra.control
 {
     public class Conexion
     {
-        //PRUEBA DE GITHUB
         public static string servidor = "localhost"; //Nombre o ip del servidor de MySQL
         public static string bd = "bdtiendita"; // Nombre de la base de datos
         public static string usuario = "root"; //Usuario de acceso a MySQL
