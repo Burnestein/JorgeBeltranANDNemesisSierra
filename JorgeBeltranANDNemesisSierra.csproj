@@ -54,6 +54,8 @@
     <Compile Include="control\Control.cs" />
     <Compile Include="control\ControlClientes.cs" />
     <Compile Include="control\ControlUsuarios.cs" />
+    <Compile Include="entidades\Persona.cs" />
+    <Compile Include="entidades\Usuario.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,7 +91,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="entidades\" />
     <Folder Include="imagenes\" />
     <Folder Include="mensajes\" />
     <Folder Include="recursos\" />
