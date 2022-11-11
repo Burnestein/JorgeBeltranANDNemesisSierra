@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JorgeBeltranANDNemesisSierra.entidades
 {
-    class Usuario: Persona
+    public class Usuario: Persona
     {
         private String usuarios;
         private String contra;
