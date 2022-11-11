@@ -1,27 +1,44 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using JorgeBeltranANDNemesisSierra.control;
+using JorgeBeltranANDNemesisSierra.vistas;
+using JorgeBeltranANDNemesisSierra.entidades;
 
 namespace JorgeBeltranANDNemesisSierra
 {
     public partial class Form1 : Form
     {
         Conexion conectar = new Conexion();
+        ControlUsuarios control = new ControlUsuarios();
+        Usuario usuario = new Usuario();
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void CargarImagen()
         {
-            conectar.conectar();
+            Pbx_Imagen.Image = global::JorgeBeltranANDNemesisSierra.recursos.nasa;
+        }
+
+        private void BtnConectar_Click(object sender, EventArgs e)
+        {
+            usuario.Usuarios = TbxUsuario.Text;
+            usuario.Contra = TbxContrasena.Text;
+            byte existe = control.ValidarUsuarios(usuario);             
+            if (existe == 1)
+            {
+                //Mostrar el menú principal
+                FrmMenu frmmenu = new FrmMenu();
+                frmmenu.Show();
+                this.Hide();
+                
+            }
+             
+            else
+            {
+                MessageBox.Show("Usuario no válido");
+            }            
         }
     }
 }
