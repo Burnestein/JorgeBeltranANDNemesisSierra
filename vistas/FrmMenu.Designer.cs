@@ -31,13 +31,13 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.TsmiOpciones = new System.Windows.Forms.ToolStripMenuItem();
             this.MItemUsuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.MItemProductos = new System.Windows.Forms.ToolStripMenuItem();
             this.MItemClientes = new System.Windows.Forms.ToolStripMenuItem();
-            this.MItemVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.MItemProveedores = new System.Windows.Forms.ToolStripMenuItem();
+            this.MItemVentas = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,11 +50,6 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // TsmiOpciones
             // 
@@ -81,6 +76,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.MItemProductos.Name = "MItemProductos";
             this.MItemProductos.Size = new System.Drawing.Size(180, 22);
             this.MItemProductos.Text = "Productos";
+            this.MItemProductos.Click += new System.EventHandler(this.MItemProductos_Click);
             // 
             // MItemClientes
             // 
@@ -88,17 +84,22 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.MItemClientes.Size = new System.Drawing.Size(180, 22);
             this.MItemClientes.Text = "Clientes";
             // 
+            // MItemProveedores
+            // 
+            this.MItemProveedores.Name = "MItemProveedores";
+            this.MItemProveedores.Size = new System.Drawing.Size(180, 22);
+            this.MItemProveedores.Text = "Proveedores";
+            // 
             // MItemVentas
             // 
             this.MItemVentas.Name = "MItemVentas";
             this.MItemVentas.Size = new System.Drawing.Size(180, 22);
             this.MItemVentas.Text = "Ventas";
             // 
-            // MItemProveedores
+            // contextMenuStrip1
             // 
-            this.MItemProveedores.Name = "MItemProveedores";
-            this.MItemProveedores.Size = new System.Drawing.Size(180, 22);
-            this.MItemProveedores.Text = "Proveedores";
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // FrmMenu
             // 

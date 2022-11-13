@@ -103,7 +103,7 @@ namespace JorgeBeltranANDNemesisSierra
             this.Controls.Add(this.BtnConectar);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.Pbx_Imagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
