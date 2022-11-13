@@ -72,12 +72,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Prueba.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Prueba.Designer.cs">
-      <DependentUpon>Prueba.cs</DependentUpon>
-    </Compile>
     <Compile Include="recursos\Sesiones.cs" />
     <Compile Include="vistas\FrmClientes.cs">
       <SubType>Form</SubType>
@@ -115,12 +109,6 @@
     <Compile Include="vistas\FrmVentas.Designer.cs">
       <DependentUpon>FrmVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\PruebaLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vistas\PruebaLogin.Designer.cs">
-      <DependentUpon>PruebaLogin.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,9 +122,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Prueba.resx">
-      <DependentUpon>Prueba.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="vistas\FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,9 +136,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\FrmVentas.resx">
       <DependentUpon>FrmVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vistas\PruebaLogin.resx">
-      <DependentUpon>PruebaLogin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
