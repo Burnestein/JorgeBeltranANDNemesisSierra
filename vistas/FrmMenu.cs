@@ -20,5 +20,11 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             FrmUsuarios user = new FrmUsuarios();
             user.ShowDialog();
         }
+
+        private void MItemProductos_Click(object sender, EventArgs e)
+        {
+            FrmProductos productos = new FrmProductos();
+            productos.ShowDialog();
+        }
     }
 }

@@ -9,6 +9,7 @@ namespace JorgeBeltranANDNemesisSierra.recursos
     public class Sesiones
     {
         public static String nomusuario;
+        public static String mensajeError = "";
         public static String errUsuario = "usuario no valido";
     }
 }

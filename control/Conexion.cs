@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
 namespace JorgeBeltranANDNemesisSierra.control
 {
     public class Conexion
     {   // Probando cambios en Github
-
         public static string servidor = "localhost"; //Nombre o ip del servidor de MySQL
         public static string bd = "bdtiendita"; // Nombre de la base de datos
         public static string usuario = "root"; //Usuario de acceso a MySQL
@@ -19,7 +13,7 @@ namespace JorgeBeltranANDNemesisSierra.control
         public static string cadenaConexion = "Database=" + bd + "; Data Source="
             + servidor + "; User id=" + usuario + "; Password=" + password + "";
 
-        public MySqlConnection con;
+        public static MySqlConnection con;
         public MySqlConnection conectar()
         {
             //Instancia para conexion a SQL

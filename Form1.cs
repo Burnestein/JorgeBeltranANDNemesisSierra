@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using JorgeBeltranANDNemesisSierra.control;
 using JorgeBeltranANDNemesisSierra.vistas;
 using JorgeBeltranANDNemesisSierra.entidades;
+using JorgeBeltranANDNemesisSierra.recursos;
 
 namespace JorgeBeltranANDNemesisSierra
 {
@@ -14,11 +15,12 @@ namespace JorgeBeltranANDNemesisSierra
         public Form1()
         {
             InitializeComponent();
+            CargarImagen();
         }
 
         public void CargarImagen()
         {
-            Pbx_Imagen.Image = global::JorgeBeltranANDNemesisSierra.recursos.nasa;
+            Pbx_Imagen.Image = Properties.Resources.nasa;
         }
 
         private void BtnConectar_Click(object sender, EventArgs e)
@@ -32,13 +34,12 @@ namespace JorgeBeltranANDNemesisSierra
                 FrmMenu frmmenu = new FrmMenu();
                 frmmenu.Show();
                 this.Hide();
-                
-            }
-             
+            }             
             else
             {
-                MessageBox.Show("Usuario no válido");
+                MessageBox.Show(Sesiones.errUsuario);
             }            
         }
+
     }
 }
