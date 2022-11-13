@@ -32,7 +32,7 @@ namespace JorgeBeltranANDNemesisSierra.control
                 }
                 else
                 {
-                    MessageBox.Show("usuario no válido.");
+                    MessageBox.Show("usuario o contraseña no válidos.");
                 }
 
             }

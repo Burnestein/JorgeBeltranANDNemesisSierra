@@ -15,9 +15,9 @@ namespace JorgeBeltranANDNemesisSierra
         public Form1()
         {
             InitializeComponent();
-            CargarImagen();
+            //CargarImagen();
         }
-
+        
         public void CargarImagen()
         {
             Pbx_Imagen.Image = Properties.Resources.nasa;
@@ -27,19 +27,18 @@ namespace JorgeBeltranANDNemesisSierra
         {
             usuario.Usuarios = TbxUsuario.Text;
             usuario.Contra = TbxContrasena.Text;
-            byte existe = control.ValidarUsuarios(usuario);             
+            byte existe = control.ValidarUsuarios(usuario);
             if (existe == 1)
             {
                 //Mostrar el menú principal
                 FrmMenu frmmenu = new FrmMenu();
                 frmmenu.Show();
                 this.Hide();
-            }             
+            }
             else
             {
                 MessageBox.Show(Sesiones.errUsuario);
-            }            
+            }
         }
-
     }
 }
