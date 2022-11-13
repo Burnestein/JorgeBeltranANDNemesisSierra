@@ -34,8 +34,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\Documents\Respaldo\Documentos\Documentos Escritorio Esta Pc\TRABAJO CUC MATERIAS\4TO SEMESTRE\ESTRUCTURA DE DATOS II\Proyecto Final\MySql.Data.dll</HintPath>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Documents\Respaldo\Documentos\Documentos Escritorio Esta Pc\TRABAJO CUC MATERIAS\4TO SEMESTRE\SEMINARIO DE ESTRUCTURAS DE DATOS II\Proyecto Final\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -153,6 +156,16 @@
   <ItemGroup>
     <Content Include="imagenes\nasa.png" />
     <Content Include="recursos\nasa.png" />
+    <None Include="Resources\clientes_final.png" />
+    <None Include="Resources\caja_1.png" />
+    <None Include="Resources\caja.png" />
+    <None Include="Resources\usuarios_final.jpg" />
+    <None Include="Resources\usuarios_112.jpg" />
+    <None Include="Resources\usuarios_1.jpg" />
+    <None Include="Resources\usuarios.jpg" />
+    <None Include="Resources\usuarios_1.png" />
+    <None Include="Resources\usuarios.png" />
+    <None Include="Resources\logo_nasa.png" />
     <None Include="Resources\nasa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

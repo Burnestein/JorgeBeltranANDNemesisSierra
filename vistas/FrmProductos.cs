@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Text;
+using System.Drawing;
 using System.Windows.Forms;
 using JorgeBeltranANDNemesisSierra.control;
 using JorgeBeltranANDNemesisSierra.entidades;
@@ -21,6 +22,8 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         {
             InitializeComponent();
             controlprod.ActualizarTabla(DgvProductos);
+            DgvProductos.Columns[5].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            DgvProductos.AutoResizeColumns();
         }
         //----------------------------------------------------------------------------------
         //Botón para actualizar la información de la bases de datos de productos.
@@ -179,7 +182,10 @@ namespace JorgeBeltranANDNemesisSierra.vistas
                 menu.ItemClicked += new ToolStripItemClickedEventHandler(menuclick);
             }
         }
-
+        //----------------------------------------------------------------------------------
+        //Menú desplegable
+        //Pendiente.
+        //----------------------------------------------------------------------------------
         private void menuclick(object sender, ToolStripItemClickedEventArgs e)
         {
             string idnombre = e.ClickedItem.Name.ToString();
@@ -191,9 +197,18 @@ namespace JorgeBeltranANDNemesisSierra.vistas
                 idnombre.Replace("Mostrar", "");
             }
         }
-
-
-        
+        //----------------------------------------------------------------------------------
+        //Limpiar los campos de texto.
+        //----------------------------------------------------------------------------------
+        private void BtnLimpiar_Click(object sender, EventArgs e)
+        {
+            TbxID.Text = "";
+            TbxNombreProd.Text = "";
+            TbxPrecioVenta.Text = "";
+            TbxPrecioCompra.Text = "";
+            TbxCodigo.Text = "";
+            TbxDescripcion.Text = "";
+        }
 
     }
 }
