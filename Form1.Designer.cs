@@ -38,6 +38,9 @@ namespace JorgeBeltranANDNemesisSierra
             this.Lbl_Contrasena = new System.Windows.Forms.Label();
             this.Pbx_Imagen = new System.Windows.Forms.PictureBox();
             this.Pnl_Lateral = new System.Windows.Forms.Panel();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.line1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             ((System.ComponentModel.ISupportInitialize)(this.Pbx_Imagen)).BeginInit();
             this.Pnl_Lateral.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +70,7 @@ namespace JorgeBeltranANDNemesisSierra
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LblLogin.AutoSize = true;
             this.LblLogin.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLogin.ForeColor = System.Drawing.Color.DimGray;
+            this.LblLogin.ForeColor = System.Drawing.Color.White;
             this.LblLogin.Location = new System.Drawing.Point(487, 8);
             this.LblLogin.Name = "LblLogin";
             this.LblLogin.Size = new System.Drawing.Size(100, 33);
@@ -81,8 +84,9 @@ namespace JorgeBeltranANDNemesisSierra
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TbxUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.TbxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TbxUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbxUsuario.ForeColor = System.Drawing.Color.DimGray;
+            this.TbxUsuario.ForeColor = System.Drawing.Color.White;
             this.TbxUsuario.Location = new System.Drawing.Point(350, 67);
             this.TbxUsuario.Name = "TbxUsuario";
             this.TbxUsuario.Size = new System.Drawing.Size(366, 27);
@@ -95,12 +99,14 @@ namespace JorgeBeltranANDNemesisSierra
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TbxContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.TbxContrasena.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TbxContrasena.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbxContrasena.ForeColor = System.Drawing.Color.DimGray;
+            this.TbxContrasena.ForeColor = System.Drawing.Color.White;
             this.TbxContrasena.Location = new System.Drawing.Point(350, 104);
             this.TbxContrasena.Name = "TbxContrasena";
             this.TbxContrasena.Size = new System.Drawing.Size(365, 27);
             this.TbxContrasena.TabIndex = 18;
+            this.TbxContrasena.UseSystemPasswordChar = true;
             this.TbxContrasena.UseWaitCursor = true;
             // 
             // LblUser
@@ -160,6 +166,36 @@ namespace JorgeBeltranANDNemesisSierra
             this.Pnl_Lateral.TabIndex = 21;
             this.Pnl_Lateral.UseWaitCursor = true;
             // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape1,
+            this.line1});
+            this.shapeContainer1.Size = new System.Drawing.Size(764, 301);
+            this.shapeContainer1.TabIndex = 23;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // line1
+            // 
+            this.line1.BorderColor = System.Drawing.SystemColors.Control;
+            this.line1.Name = "line1";
+            this.line1.X1 = 350;
+            this.line1.X2 = 715;
+            this.line1.Y1 = 96;
+            this.line1.Y2 = 96;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.BorderColor = System.Drawing.SystemColors.Control;
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 350;
+            this.lineShape1.X2 = 715;
+            this.lineShape1.Y1 = 135;
+            this.lineShape1.Y2 = 135;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,6 +209,7 @@ namespace JorgeBeltranANDNemesisSierra
             this.Controls.Add(this.TbxContrasena);
             this.Controls.Add(this.TbxUsuario);
             this.Controls.Add(this.BtnConectar);
+            this.Controls.Add(this.shapeContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
@@ -195,6 +232,9 @@ namespace JorgeBeltranANDNemesisSierra
         private System.Windows.Forms.Label Lbl_Contrasena;
         private System.Windows.Forms.PictureBox Pbx_Imagen;
         private System.Windows.Forms.Panel Pnl_Lateral;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+        private Microsoft.VisualBasic.PowerPacks.LineShape line1;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
     }
 }
 
