@@ -12,23 +12,6 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             InitializeComponent();
         }
 
-        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MItemUsuarios_Click(object sender, EventArgs e)
-        {
-            FrmUsuarios user = new FrmUsuarios();
-            user.ShowDialog();
-        }
-
-        private void MItemProductos_Click(object sender, EventArgs e)
-        {
-            FrmProductos productos = new FrmProductos();
-            productos.ShowDialog();
-        }
-
         void btnFocus(Button btnFocus)
         {
             btnFocus.BackColor = Color.FromArgb(75,158,253); //Cambiamos el color del botón activo
@@ -42,7 +25,11 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         private void BtnUsuarios_Click(object sender, EventArgs e)
         {
             btnFocus(BtnUsuarios);//Cambiar el color al ser seleccionado.
-
+            Form userfrm = new FrmUsuarios();
+            userfrm.MdiParent = this;
+            PanelFormularios.Controls.Clear();
+            PanelFormularios.Controls.Add(userfrm);
+            userfrm.Show();
         }
 
         private void BtnProductos_Click(object sender, EventArgs e)
@@ -55,5 +42,14 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             produc.Show();
         }
 
+        private void BtnClientes_Click(object sender, EventArgs e)
+        {
+            btnFocus(BtnClientes);//Cambiar el color al ser seleccionado.
+            Form clientes = new FrmClientes();
+            clientes.MdiParent = this;
+            PanelFormularios.Controls.Clear();
+            PanelFormularios.Controls.Add(clientes);
+            clientes.Show();
+        }
     }
 }

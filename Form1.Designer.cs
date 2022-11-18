@@ -36,13 +36,13 @@ namespace JorgeBeltranANDNemesisSierra
             this.TbxContrasena = new System.Windows.Forms.TextBox();
             this.LblUser = new System.Windows.Forms.Label();
             this.Lbl_Contrasena = new System.Windows.Forms.Label();
-            this.Pbx_Imagen = new System.Windows.Forms.PictureBox();
             this.Pnl_Lateral = new System.Windows.Forms.Panel();
+            this.Pbx_Imagen = new System.Windows.Forms.PictureBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.line1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            ((System.ComponentModel.ISupportInitialize)(this.Pbx_Imagen)).BeginInit();
+            this.line1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.Pnl_Lateral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pbx_Imagen)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnConectar
@@ -89,7 +89,7 @@ namespace JorgeBeltranANDNemesisSierra
             this.TbxUsuario.ForeColor = System.Drawing.Color.White;
             this.TbxUsuario.Location = new System.Drawing.Point(350, 67);
             this.TbxUsuario.Name = "TbxUsuario";
-            this.TbxUsuario.Size = new System.Drawing.Size(366, 27);
+            this.TbxUsuario.Size = new System.Drawing.Size(366, 20);
             this.TbxUsuario.TabIndex = 17;
             this.TbxUsuario.UseWaitCursor = true;
             // 
@@ -104,7 +104,7 @@ namespace JorgeBeltranANDNemesisSierra
             this.TbxContrasena.ForeColor = System.Drawing.Color.White;
             this.TbxContrasena.Location = new System.Drawing.Point(350, 104);
             this.TbxContrasena.Name = "TbxContrasena";
-            this.TbxContrasena.Size = new System.Drawing.Size(365, 27);
+            this.TbxContrasena.Size = new System.Drawing.Size(365, 20);
             this.TbxContrasena.TabIndex = 18;
             this.TbxContrasena.UseSystemPasswordChar = true;
             this.TbxContrasena.UseWaitCursor = true;
@@ -139,20 +139,6 @@ namespace JorgeBeltranANDNemesisSierra
             this.Lbl_Contrasena.Text = "Contraseña:";
             this.Lbl_Contrasena.UseWaitCursor = true;
             // 
-            // Pbx_Imagen
-            // 
-            this.Pbx_Imagen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Pbx_Imagen.Image = global::JorgeBeltranANDNemesisSierra.Properties.Resources.logo_nasa;
-            this.Pbx_Imagen.Location = new System.Drawing.Point(3, 88);
-            this.Pbx_Imagen.Name = "Pbx_Imagen";
-            this.Pbx_Imagen.Size = new System.Drawing.Size(197, 141);
-            this.Pbx_Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Pbx_Imagen.TabIndex = 9;
-            this.Pbx_Imagen.TabStop = false;
-            this.Pbx_Imagen.UseWaitCursor = true;
-            // 
             // Pnl_Lateral
             // 
             this.Pnl_Lateral.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -166,6 +152,20 @@ namespace JorgeBeltranANDNemesisSierra
             this.Pnl_Lateral.TabIndex = 21;
             this.Pnl_Lateral.UseWaitCursor = true;
             // 
+            // Pbx_Imagen
+            // 
+            this.Pbx_Imagen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Pbx_Imagen.Image = global::JorgeBeltranANDNemesisSierra.Properties.Resources.logo_nasa_final;
+            this.Pbx_Imagen.Location = new System.Drawing.Point(3, 85);
+            this.Pbx_Imagen.Name = "Pbx_Imagen";
+            this.Pbx_Imagen.Size = new System.Drawing.Size(194, 141);
+            this.Pbx_Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Pbx_Imagen.TabIndex = 9;
+            this.Pbx_Imagen.TabStop = false;
+            this.Pbx_Imagen.UseWaitCursor = true;
+            // 
             // shapeContainer1
             // 
             this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
@@ -177,24 +177,27 @@ namespace JorgeBeltranANDNemesisSierra
             this.shapeContainer1.Size = new System.Drawing.Size(764, 301);
             this.shapeContainer1.TabIndex = 23;
             this.shapeContainer1.TabStop = false;
-            // 
-            // line1
-            // 
-            this.line1.BorderColor = System.Drawing.SystemColors.Control;
-            this.line1.Name = "line1";
-            this.line1.X1 = 350;
-            this.line1.X2 = 715;
-            this.line1.Y1 = 96;
-            this.line1.Y2 = 96;
+            this.shapeContainer1.UseWaitCursor = true;
             // 
             // lineShape1
             // 
             this.lineShape1.BorderColor = System.Drawing.SystemColors.Control;
             this.lineShape1.Name = "lineShape1";
+            this.lineShape1.UseWaitCursor = true;
             this.lineShape1.X1 = 350;
             this.lineShape1.X2 = 715;
-            this.lineShape1.Y1 = 135;
-            this.lineShape1.Y2 = 135;
+            this.lineShape1.Y1 = 142;
+            this.lineShape1.Y2 = 142;
+            // 
+            // line1
+            // 
+            this.line1.BorderColor = System.Drawing.SystemColors.Control;
+            this.line1.Name = "line1";
+            this.line1.UseWaitCursor = true;
+            this.line1.X1 = 350;
+            this.line1.X2 = 715;
+            this.line1.Y1 = 96;
+            this.line1.Y2 = 96;
             // 
             // Form1
             // 
@@ -215,8 +218,8 @@ namespace JorgeBeltranANDNemesisSierra
             this.Name = "Form1";
             this.Text = "Login";
             this.UseWaitCursor = true;
-            ((System.ComponentModel.ISupportInitialize)(this.Pbx_Imagen)).EndInit();
             this.Pnl_Lateral.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Pbx_Imagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

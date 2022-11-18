@@ -336,10 +336,10 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TbxNombreProd);
             this.Controls.Add(this.LblNombreProd);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProductos";
             this.Text = "Catálogo de productos";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.DgvProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -29,17 +29,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.TsmiOpciones = new System.Windows.Forms.ToolStripMenuItem();
-            this.MItemUsuarios = new System.Windows.Forms.ToolStripMenuItem();
-            this.MItemProductos = new System.Windows.Forms.ToolStripMenuItem();
-            this.MItemClientes = new System.Windows.Forms.ToolStripMenuItem();
-            this.MItemProveedores = new System.Windows.Forms.ToolStripMenuItem();
-            this.MItemVentas = new System.Windows.Forms.ToolStripMenuItem();
-            this.catalogoDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.PanelBack = new System.Windows.Forms.Panel();
             this.PanelFormularios = new System.Windows.Forms.Panel();
             this.PanelMenu = new System.Windows.Forms.Panel();
@@ -54,7 +44,6 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.panel1 = new System.Windows.Forms.Panel();
             this.LblCompanyNombre = new System.Windows.Forms.Label();
             this.PbxLogo = new System.Windows.Forms.PictureBox();
-            this.menuStrip1.SuspendLayout();
             this.PanelBack.SuspendLayout();
             this.PanelMenu.SuspendLayout();
             this.PlFoot.SuspendLayout();
@@ -62,81 +51,15 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TsmiOpciones,
-            this.catalogoDeProductosToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(881, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // TsmiOpciones
-            // 
-            this.TsmiOpciones.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MItemUsuarios,
-            this.MItemProductos,
-            this.MItemClientes,
-            this.MItemProveedores,
-            this.MItemVentas});
-            this.TsmiOpciones.Name = "TsmiOpciones";
-            this.TsmiOpciones.Size = new System.Drawing.Size(69, 20);
-            this.TsmiOpciones.Text = "Opciones";
-            this.TsmiOpciones.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
-            // 
-            // MItemUsuarios
-            // 
-            this.MItemUsuarios.Name = "MItemUsuarios";
-            this.MItemUsuarios.Size = new System.Drawing.Size(139, 22);
-            this.MItemUsuarios.Text = "Usuarios";
-            this.MItemUsuarios.Click += new System.EventHandler(this.MItemUsuarios_Click);
-            // 
-            // MItemProductos
-            // 
-            this.MItemProductos.Name = "MItemProductos";
-            this.MItemProductos.Size = new System.Drawing.Size(139, 22);
-            this.MItemProductos.Text = "Productos";
-            this.MItemProductos.Click += new System.EventHandler(this.MItemProductos_Click);
-            // 
-            // MItemClientes
-            // 
-            this.MItemClientes.Name = "MItemClientes";
-            this.MItemClientes.Size = new System.Drawing.Size(139, 22);
-            this.MItemClientes.Text = "Clientes";
-            // 
-            // MItemProveedores
-            // 
-            this.MItemProveedores.Name = "MItemProveedores";
-            this.MItemProveedores.Size = new System.Drawing.Size(139, 22);
-            this.MItemProveedores.Text = "Proveedores";
-            // 
-            // MItemVentas
-            // 
-            this.MItemVentas.Name = "MItemVentas";
-            this.MItemVentas.Size = new System.Drawing.Size(139, 22);
-            this.MItemVentas.Text = "Ventas";
-            // 
-            // catalogoDeProductosToolStripMenuItem
-            // 
-            this.catalogoDeProductosToolStripMenuItem.Name = "catalogoDeProductosToolStripMenuItem";
-            this.catalogoDeProductosToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // PanelBack
             // 
             this.PanelBack.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.PanelBack.Controls.Add(this.PanelFormularios);
             this.PanelBack.Controls.Add(this.PanelMenu);
             this.PanelBack.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelBack.Location = new System.Drawing.Point(0, 24);
+            this.PanelBack.Location = new System.Drawing.Point(0, 0);
             this.PanelBack.Name = "PanelBack";
-            this.PanelBack.Size = new System.Drawing.Size(881, 421);
+            this.PanelBack.Size = new System.Drawing.Size(1073, 510);
             this.PanelBack.TabIndex = 1;
             // 
             // PanelFormularios
@@ -145,7 +68,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelFormularios.Location = new System.Drawing.Point(200, 0);
             this.PanelFormularios.Name = "PanelFormularios";
-            this.PanelFormularios.Size = new System.Drawing.Size(681, 421);
+            this.PanelFormularios.Size = new System.Drawing.Size(873, 510);
             this.PanelFormularios.TabIndex = 1;
             // 
             // PanelMenu
@@ -162,14 +85,14 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenu.Location = new System.Drawing.Point(0, 0);
             this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Size = new System.Drawing.Size(200, 421);
+            this.PanelMenu.Size = new System.Drawing.Size(200, 510);
             this.PanelMenu.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(69)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 379);
+            this.panel2.Location = new System.Drawing.Point(0, 468);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 2);
             this.panel2.TabIndex = 0;
@@ -178,7 +101,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             // 
             this.PlFoot.Controls.Add(this.LblUsername);
             this.PlFoot.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PlFoot.Location = new System.Drawing.Point(0, 381);
+            this.PlFoot.Location = new System.Drawing.Point(0, 470);
             this.PlFoot.Name = "PlFoot";
             this.PlFoot.Size = new System.Drawing.Size(200, 40);
             this.PlFoot.TabIndex = 0;
@@ -247,6 +170,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.BtnClientes.Text = "            Clientes";
             this.BtnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnClientes.UseVisualStyleBackColor = true;
+            this.BtnClientes.Click += new System.EventHandler(this.BtnClientes_Click);
             // 
             // BtnProductos
             // 
@@ -322,18 +246,13 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 445);
+            this.ClientSize = new System.Drawing.Size(1073, 510);
             this.Controls.Add(this.PanelBack);
-            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú principal";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.PanelBack.ResumeLayout(false);
             this.PanelMenu.ResumeLayout(false);
             this.PlFoot.ResumeLayout(false);
@@ -342,21 +261,10 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem TsmiOpciones;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem MItemProductos;
-        private System.Windows.Forms.ToolStripMenuItem MItemClientes;
-        private System.Windows.Forms.ToolStripMenuItem MItemVentas;
-        private System.Windows.Forms.ToolStripMenuItem MItemProveedores;
-        private System.Windows.Forms.ToolStripMenuItem catalogoDeProductosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem MItemUsuarios;
         private System.Windows.Forms.Panel PanelBack;
         private System.Windows.Forms.Panel PanelMenu;
         private System.Windows.Forms.Panel PanelFormularios;

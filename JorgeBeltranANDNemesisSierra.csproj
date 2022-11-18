@@ -70,6 +70,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="mensajes\Errores.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="recursos\Sesiones.cs" />
@@ -150,12 +151,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="mensajes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="imagenes\nasa.png" />
     <Content Include="recursos\nasa.png" />
+    <None Include="Resources\logo_nasa_final.png" />
     <None Include="Resources\clientes_final.png" />
     <None Include="Resources\caja_1.png" />
     <None Include="Resources\caja.png" />
