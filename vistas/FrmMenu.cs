@@ -10,6 +10,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         public FrmMenu()
         {
             InitializeComponent();
+            LblUsername.Text = "Usuario: " + Form1.nameuser;
             Form userfrm = new FrmUsuarios();
             userfrm.MdiParent = this;
             PanelFormularios.Controls.Clear();
@@ -76,5 +77,6 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             PanelFormularios.Controls.Add(ventas);
             ventas.Show();
         }
+
     }
 }

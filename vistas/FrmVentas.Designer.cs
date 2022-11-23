@@ -62,6 +62,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.limitecredito = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnCalcular = new System.Windows.Forms.Button();
+            this.BtnReporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -397,11 +398,24 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.BtnCalcular.UseVisualStyleBackColor = true;
             this.BtnCalcular.Click += new System.EventHandler(this.BtnCalcular_Click);
             // 
+            // BtnReporte
+            // 
+            this.BtnReporte.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BtnReporte.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.BtnReporte.Location = new System.Drawing.Point(440, 222);
+            this.BtnReporte.Name = "BtnReporte";
+            this.BtnReporte.Size = new System.Drawing.Size(94, 34);
+            this.BtnReporte.TabIndex = 68;
+            this.BtnReporte.Text = "Reporte";
+            this.BtnReporte.UseVisualStyleBackColor = true;
+            this.BtnReporte.Click += new System.EventHandler(this.BtnReporte_Click);
+            // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(849, 478);
+            this.Controls.Add(this.BtnReporte);
             this.Controls.Add(this.BtnCalcular);
             this.Controls.Add(this.TbxUsuario);
             this.Controls.Add(this.LblUsuario);
@@ -472,5 +486,6 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn limitecredito;
         private System.Windows.Forms.Button BtnCalcular;
+        private System.Windows.Forms.Button BtnReporte;
     }
 }

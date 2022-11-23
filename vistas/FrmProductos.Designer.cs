@@ -55,6 +55,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnLimpiar = new System.Windows.Forms.Button();
+            this.BtnReporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -313,11 +314,24 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.BtnLimpiar.UseVisualStyleBackColor = true;
             this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
+            // BtnReporte
+            // 
+            this.BtnReporte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnReporte.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.BtnReporte.Location = new System.Drawing.Point(704, 276);
+            this.BtnReporte.Name = "BtnReporte";
+            this.BtnReporte.Size = new System.Drawing.Size(94, 34);
+            this.BtnReporte.TabIndex = 19;
+            this.BtnReporte.Text = "Reporte";
+            this.BtnReporte.UseVisualStyleBackColor = true;
+            this.BtnReporte.Click += new System.EventHandler(this.BtnReporte_Click);
+            // 
             // FrmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(865, 517);
+            this.Controls.Add(this.BtnReporte);
             this.Controls.Add(this.BtnLimpiar);
             this.Controls.Add(this.DgvProductos);
             this.Controls.Add(this.TbxID);
@@ -374,5 +388,6 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.Button BtnReporte;
     }
 }

@@ -12,6 +12,7 @@ namespace JorgeBeltranANDNemesisSierra
         Conexion conectar = new Conexion();
         ControlUsuarios control = new ControlUsuarios();
         Usuario usuario = new Usuario();
+        public static String nameuser;
         public Form1()
         {
             InitializeComponent();
@@ -30,6 +31,8 @@ namespace JorgeBeltranANDNemesisSierra
             byte existe = control.ValidarUsuarios(usuario);
             if (existe == 1)
             {
+                //Pasar el usuario
+                nameuser = TbxUsuario.Text;
                 //Mostrar el menú principal
                 FrmMenu frmmenu = new FrmMenu();
                 frmmenu.Show();
