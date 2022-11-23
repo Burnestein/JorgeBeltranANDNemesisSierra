@@ -10,23 +10,11 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         public FrmMenu()
         {
             InitializeComponent();
-        }
-
-        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MItemUsuarios_Click(object sender, EventArgs e)
-        {
-            FrmUsuarios user = new FrmUsuarios();
-            user.ShowDialog();
-        }
-
-        private void MItemProductos_Click(object sender, EventArgs e)
-        {
-            FrmProductos productos = new FrmProductos();
-            productos.ShowDialog();
+            Form userfrm = new FrmUsuarios();
+            userfrm.MdiParent = this;
+            PanelFormularios.Controls.Clear();
+            PanelFormularios.Controls.Add(userfrm);
+            userfrm.Show();
         }
 
         void btnFocus(Button btnFocus)
@@ -42,7 +30,11 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         private void BtnUsuarios_Click(object sender, EventArgs e)
         {
             btnFocus(BtnUsuarios);//Cambiar el color al ser seleccionado.
-
+            Form userfrm = new FrmUsuarios();
+            userfrm.MdiParent = this;
+            PanelFormularios.Controls.Clear();
+            PanelFormularios.Controls.Add(userfrm);
+            userfrm.Show();
         }
 
         private void BtnProductos_Click(object sender, EventArgs e)
@@ -55,5 +47,34 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             produc.Show();
         }
 
+        private void BtnClientes_Click(object sender, EventArgs e)
+        {
+            btnFocus(BtnClientes);//Cambiar el color al ser seleccionado.
+            Form clientes = new FrmClientes();
+            clientes.MdiParent = this;
+            PanelFormularios.Controls.Clear();
+            PanelFormularios.Controls.Add(clientes);
+            clientes.Show();
+        }
+
+        private void BtnProveedores_Click(object sender, EventArgs e)
+        {
+            btnFocus(BtnProveedores);//Cambiar el color al ser seleccionado.
+            Form proveedores = new FrmProveedores();
+            proveedores.MdiParent = this;
+            PanelFormularios.Controls.Clear();
+            PanelFormularios.Controls.Add(proveedores);
+            proveedores.Show();
+        }
+
+        private void BtnVentas_Click(object sender, EventArgs e)
+        {
+            btnFocus(BtnVentas);//Cambiar el color al ser seleccionado.
+            Form ventas = new FrmVentas();
+            ventas.MdiParent = this;
+            PanelFormularios.Controls.Clear();
+            PanelFormularios.Controls.Add(ventas);
+            ventas.Show();
+        }
     }
 }

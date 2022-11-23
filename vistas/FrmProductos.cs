@@ -37,36 +37,39 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         //----------------------------------------------------------------------------------
         private void BtnInsertar_Click(object sender, EventArgs e)
         {
-            productos.NombreProducto = TbxNombreProd.Text;
-            productos.PrecioCompra = Convert.ToInt32(TbxPrecioCompra.Text);
-            productos.PrecioVenta = Convert.ToInt32(TbxPrecioVenta.Text);
-            productos.Codigo = Convert.ToInt32(TbxCodigo.Text);
-            productos.Descripcion = TbxDescripcion.Text;
-
             if (TbxNombreProd.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + " El nombre no puede estar vacío.";
-            }if (TbxPrecioCompra.Text == "")
+                Sesiones.mensajeError = Sesiones.mensajeError + mensajes.Errores.nombreProduc;
+            }
+            if (TbxPrecioCompra.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + " El precio de compra no puede estar vacío.";
-            }if (TbxPrecioVenta.Text == "")
+                Sesiones.mensajeError = Sesiones.mensajeError + mensajes.Errores.PrecioCompra;
+            }
+            if (TbxPrecioVenta.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + " El precio de venta no puede estar vacío.";
-            }if (TbxCodigo.Text == "")
+                Sesiones.mensajeError = Sesiones.mensajeError + mensajes.Errores.PrecioVenta;
+            }
+            if (TbxCodigo.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + " El código del producto no puede estar vacío.";
-            }if (TbxDescripcion.Text == "")
+                Sesiones.mensajeError = Sesiones.mensajeError + mensajes.Errores.Codigo;
+            }
+            if (TbxDescripcion.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + " La descripción no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + mensajes.Errores.Descripcion;
             }
             if (Sesiones.mensajeError == "")
             {
+                productos.NombreProducto = TbxNombreProd.Text;
+                productos.PrecioCompra = Convert.ToInt32(TbxPrecioCompra.Text);
+                productos.PrecioVenta = Convert.ToInt32(TbxPrecioVenta.Text);
+                productos.Codigo = Convert.ToInt32(TbxCodigo.Text);
+                productos.Descripcion = TbxDescripcion.Text;
                 controlprod.InsertarProducto(productos, DgvProductos);
             }
             else
             {
                 MessageBox.Show(Sesiones.mensajeError);
-            }     
+            }            
         }
         //----------------------------------------------------------------------------------
         //Evento al dar click en alguna celda y obtener la información, y ponerla en los textbox.
@@ -86,38 +89,38 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         //Botón para comprobar los campos y hacer modificación a los productos.
         //----------------------------------------------------------------------------------
         private void BtnModificar_Click(object sender, EventArgs e)
-        {
-            productos.NombreProducto = TbxNombreProd.Text;
-            productos.PrecioCompra = Convert.ToInt32(TbxPrecioCompra.Text);
-            productos.PrecioVenta = Convert.ToInt32(TbxPrecioVenta.Text);
-            productos.Codigo = Convert.ToInt32(TbxCodigo.Text);
-            productos.Descripcion = TbxDescripcion.Text;
-            productos.IdProducto1 = Convert.ToInt32(idSel);
-
+        {    
             if (TbxNombreProd.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + " El nombre no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + mensajes.Errores.nombreProduc;
             }
             if (TbxPrecioCompra.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + " El precio de compra no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + mensajes.Errores.PrecioCompra;
             }
             if (TbxPrecioVenta.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + " El precio de venta no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + mensajes.Errores.PrecioVenta;
             }
             if (TbxCodigo.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + " El código del producto no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + mensajes.Errores.Codigo;
             }
             if (TbxDescripcion.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + " La descripción no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + mensajes.Errores.Descripcion;
             }
             if (Sesiones.mensajeError == "")
             {
+                productos.NombreProducto = TbxNombreProd.Text;
+                productos.PrecioCompra = Convert.ToInt32(TbxPrecioCompra.Text);
+                productos.PrecioVenta = Convert.ToInt32(TbxPrecioVenta.Text);
+                productos.Codigo = Convert.ToInt32(TbxCodigo.Text);
+                productos.Descripcion = TbxDescripcion.Text;
+                productos.IdProducto1 = Convert.ToInt32(idSel);
                 controlprod.ModificarProducto(productos, DgvProductos);
-            }else
+            }
+            else
             {
                 MessageBox.Show(Sesiones.mensajeError);
             }
@@ -127,35 +130,34 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         //----------------------------------------------------------------------------------
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            productos.NombreProducto = TbxNombreProd.Text;
-            productos.PrecioCompra = Convert.ToInt32(TbxPrecioCompra.Text);
-            productos.PrecioVenta = Convert.ToInt32(TbxPrecioVenta.Text);
-            productos.Codigo = Convert.ToInt32(TbxCodigo.Text);
-            productos.Descripcion = TbxDescripcion.Text;
-            productos.IdProducto1 = Convert.ToInt32(idSel);
-
             if (TbxNombreProd.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + " El nombre no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + mensajes.Errores.nombreProduc;
             }
             if (TbxPrecioCompra.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + " El precio de compra no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + mensajes.Errores.PrecioCompra;
             }
             if (TbxPrecioVenta.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + " El precio de venta no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + mensajes.Errores.PrecioVenta;
             }
             if (TbxCodigo.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + " El código del producto no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + mensajes.Errores.Codigo;
             }
             if (TbxDescripcion.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + " La descripción no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + mensajes.Errores.Descripcion;
             }
             if (Sesiones.mensajeError == "")
             {
+                productos.NombreProducto = TbxNombreProd.Text;
+                productos.PrecioCompra = Convert.ToInt32(TbxPrecioCompra.Text);
+                productos.PrecioVenta = Convert.ToInt32(TbxPrecioVenta.Text);
+                productos.Codigo = Convert.ToInt32(TbxCodigo.Text);
+                productos.Descripcion = TbxDescripcion.Text;
+                productos.IdProducto1 = Convert.ToInt32(idSel);
                 controlprod.EliminarProducto(productos, DgvProductos);
             }
             else

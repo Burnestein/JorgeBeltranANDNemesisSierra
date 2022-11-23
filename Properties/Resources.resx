@@ -118,11 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="caja_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\caja_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo_nasa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_nasa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="caja" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\caja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="clientes_final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clientes_final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="usuarios1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usuarios.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,8 +130,8 @@
   <data name="usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nasa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nasa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="caja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\caja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="usuarios_final" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usuarios_final.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,16 +139,19 @@
   <data name="usuarios_112" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usuarios_112.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="nasa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nasa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="usuarios_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usuarios_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="usuarios_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usuarios_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo_nasa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo_nasa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="caja_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\caja_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="clientes_final" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clientes_final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo_nasa_final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_nasa_final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -57,7 +57,9 @@
     <Compile Include="control\Control.cs" />
     <Compile Include="control\ControlClientes.cs" />
     <Compile Include="control\ControlProductos.cs" />
+    <Compile Include="control\controlProveedores.cs" />
     <Compile Include="control\ControlUsuarios.cs" />
+    <Compile Include="control\ControlVentas.cs" />
     <Compile Include="entidades\Clientes.cs" />
     <Compile Include="entidades\Persona.cs" />
     <Compile Include="entidades\Productos.cs" />
@@ -70,6 +72,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="mensajes\Errores.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="recursos\Sesiones.cs" />
@@ -131,6 +134,9 @@
     <EmbeddedResource Include="vistas\FrmProductos.resx">
       <DependentUpon>FrmProductos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vistas\FrmProveedores.resx">
+      <DependentUpon>FrmProveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vistas\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,12 +156,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="mensajes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="imagenes\nasa.png" />
     <Content Include="recursos\nasa.png" />
+    <None Include="Resources\logo_nasa_final.png" />
     <None Include="Resources\clientes_final.png" />
     <None Include="Resources\caja_1.png" />
     <None Include="Resources\caja.png" />

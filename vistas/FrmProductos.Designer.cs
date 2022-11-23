@@ -245,6 +245,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.TbxID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.TbxID.Enabled = false;
             this.TbxID.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TbxID.Location = new System.Drawing.Point(361, 54);
             this.TbxID.Name = "TbxID";
@@ -336,10 +337,10 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TbxNombreProd);
             this.Controls.Add(this.LblNombreProd);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProductos";
             this.Text = "Catálogo de productos";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.DgvProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
