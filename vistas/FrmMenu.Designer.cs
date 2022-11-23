@@ -59,7 +59,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.PanelBack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelBack.Location = new System.Drawing.Point(0, 0);
             this.PanelBack.Name = "PanelBack";
-            this.PanelBack.Size = new System.Drawing.Size(1073, 510);
+            this.PanelBack.Size = new System.Drawing.Size(1370, 510);
             this.PanelBack.TabIndex = 1;
             // 
             // PanelFormularios
@@ -68,9 +68,9 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelFormularios.Location = new System.Drawing.Point(200, 0);
             this.PanelFormularios.Name = "PanelFormularios";
-            this.PanelFormularios.Size = new System.Drawing.Size(873, 510);
+            this.PanelFormularios.Size = new System.Drawing.Size(1170, 510);
             this.PanelFormularios.TabIndex = 1;
-            // 
+             // 
             // PanelMenu
             // 
             this.PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
@@ -134,6 +134,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.BtnVentas.Text = "            Ventas";
             this.BtnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnVentas.UseVisualStyleBackColor = true;
+            this.BtnVentas.Click += new System.EventHandler(this.BtnVentas_Click);
             // 
             // BtnProveedores
             // 
@@ -152,6 +153,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.BtnProveedores.Text = "            Proveedores";
             this.BtnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnProveedores.UseVisualStyleBackColor = true;
+            this.BtnProveedores.Click += new System.EventHandler(this.BtnProveedores_Click);
             // 
             // BtnClientes
             // 
@@ -246,7 +248,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1073, 510);
+            this.ClientSize = new System.Drawing.Size(1370, 510);
             this.Controls.Add(this.PanelBack);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;

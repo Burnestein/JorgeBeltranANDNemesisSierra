@@ -57,7 +57,9 @@
     <Compile Include="control\Control.cs" />
     <Compile Include="control\ControlClientes.cs" />
     <Compile Include="control\ControlProductos.cs" />
+    <Compile Include="control\controlProveedores.cs" />
     <Compile Include="control\ControlUsuarios.cs" />
+    <Compile Include="control\ControlVentas.cs" />
     <Compile Include="entidades\Clientes.cs" />
     <Compile Include="entidades\Persona.cs" />
     <Compile Include="entidades\Productos.cs" />
@@ -131,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\FrmProductos.resx">
       <DependentUpon>FrmProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\FrmProveedores.resx">
+      <DependentUpon>FrmProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>

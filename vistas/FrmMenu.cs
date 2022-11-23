@@ -10,6 +10,11 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         public FrmMenu()
         {
             InitializeComponent();
+            Form userfrm = new FrmUsuarios();
+            userfrm.MdiParent = this;
+            PanelFormularios.Controls.Clear();
+            PanelFormularios.Controls.Add(userfrm);
+            userfrm.Show();
         }
 
         void btnFocus(Button btnFocus)
@@ -50,6 +55,26 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             PanelFormularios.Controls.Clear();
             PanelFormularios.Controls.Add(clientes);
             clientes.Show();
+        }
+
+        private void BtnProveedores_Click(object sender, EventArgs e)
+        {
+            btnFocus(BtnProveedores);//Cambiar el color al ser seleccionado.
+            Form proveedores = new FrmProveedores();
+            proveedores.MdiParent = this;
+            PanelFormularios.Controls.Clear();
+            PanelFormularios.Controls.Add(proveedores);
+            proveedores.Show();
+        }
+
+        private void BtnVentas_Click(object sender, EventArgs e)
+        {
+            btnFocus(BtnVentas);//Cambiar el color al ser seleccionado.
+            Form ventas = new FrmVentas();
+            ventas.MdiParent = this;
+            PanelFormularios.Controls.Clear();
+            PanelFormularios.Controls.Add(ventas);
+            ventas.Show();
         }
     }
 }

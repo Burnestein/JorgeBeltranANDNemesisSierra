@@ -1,24 +1,25 @@
-﻿using System;
-using MySql.Data.MySqlClient;
+﻿using System.Windows.Forms;
 using JorgeBeltranANDNemesisSierra.entidades;
-using System.Windows.Forms;
+using JorgeBeltranANDNemesisSierra.recursos;
+using MySql.Data.MySqlClient;
+using System;
 
 namespace JorgeBeltranANDNemesisSierra.control
 {
     //----------------------------------------------------------------------------------
-    //Clase para operaciones CRUD de clientes y operar la información.
+    //Clase para operaciones CRUD de ventas y operar la información.
     //----------------------------------------------------------------------------------
-    public class ControlClientes : Conexion
+    public class ControlVentas : Conexion
     {
         MySqlCommand Query = new MySqlCommand();//Para preparar la consulta y guardar los datos
         MySqlDataReader consultar;//Para consultar a la base
         //----------------------------------------------------------------------------------
-        //Método para eliminar clientes.
+        //Método para eliminar ventas.
         //----------------------------------------------------------------------------------
-        public void eliminarCliente(Clientes cliente, DataGridView dataGridView)
+        public void eliminarVenta(Ventas venta, DataGridView dataGridView)
         {
             conectar();
-            string query = "delete from tblclientes where id='" + cliente.Idcliente + "';";
+            string query = "delete from tblventas where id='" + venta.Idventas + "';";
             MySqlCommand command = new MySqlCommand(query, Conexion.con);
             command.CommandTimeout = 60;
             MySqlDataReader reader;
@@ -29,7 +30,7 @@ namespace JorgeBeltranANDNemesisSierra.control
                 MessageBox.Show("Eliminación exitosa.");
                 dataGridView.Rows.Clear();
                 dataGridView.Refresh();
-                llenartablaClientes(dataGridView);
+                llenartablaVenta(dataGridView);
             }
             catch (Exception ex)
             {
@@ -37,16 +38,16 @@ namespace JorgeBeltranANDNemesisSierra.control
             }
         }
         //----------------------------------------------------------------------------------
-        //Método para consultar clientes.
+        //Método para modificar ventas.
         //----------------------------------------------------------------------------------
-        public void consultarCliente(Clientes cliente, DataGridView dataGridView)
+        public void modificarVenta(Ventas venta, DataGridView dataGridView)
         {
             conectar();
-            string query = "update tblclientes set " +
-                "nombre='" + cliente.Nombre + "', apepat='" + cliente.Apepat + "'," +
-                "apemat='" + cliente.Apemat + "', domicilio='" + cliente.Domicilio + "', colonia='" + cliente.Colonia
-                + "', telefono='" + cliente.Telefono + "', limitecredito='" + cliente.Limitecredito 
-                + "' where id='" + cliente.Idcliente + "';";
+            string query = "update tblventas set " +
+                "cantidad='" + venta.Cantidad + "', precio='" + venta.Precio + "'," +
+                "total='" + venta.Total + "', producto='" + venta.Producto + "', fecha_venta='" + venta.FechaVenta
+                + "', nom_cliente='" + venta.NomCliente + "', nom_usuario='" + venta.Usuario
+                + "' where id='" + venta.Idventas + "';";
             MySqlCommand command = new MySqlCommand(query, Conexion.con);
             command.CommandTimeout = 60;
             MySqlDataReader reader;
@@ -57,7 +58,7 @@ namespace JorgeBeltranANDNemesisSierra.control
                 MessageBox.Show("Modificación exitosa.");
                 dataGridView.Rows.Clear();
                 dataGridView.Refresh();
-                llenartablaClientes(dataGridView);
+                llenartablaVenta(dataGridView);
             }
             catch (Exception ex)
             {
@@ -65,16 +66,16 @@ namespace JorgeBeltranANDNemesisSierra.control
             }
         }
         //----------------------------------------------------------------------------------
-        //Método para registrar clientes.
+        //Método para registrar ventas.
         //----------------------------------------------------------------------------------
-        public void registrarCliente(Clientes cliente, DataGridView dataGridView)
+        public void insertarVenta(Ventas venta, DataGridView dataGridView)
         {
             conectar();
-            string query = "insert into tblclientes " +
-                "(nombre, apepat, apemat, domicilio, colonia,telefono, limitecredito)values " +
-                "('" + cliente.Nombre + "', '" + cliente.Apepat + "', '" + cliente.Apemat + "'" +
-                ",'" + cliente.Domicilio + "','" + cliente.Colonia + "','" + cliente.Telefono + "'" +
-                ",'" + cliente.Limitecredito + "')";
+            string query = "insert into tblventas " +
+                "(cantidad, precio, total, producto, fecha_venta, nom_cliente, nom_usuario)values " +
+                "('" + venta.Cantidad + "', '" + venta.Precio + "', '" + venta.Total + "'" +
+                ",'" + venta.Producto + "','" + venta.FechaVenta + "','" + venta.NomCliente + "'" +
+                ",'" + venta.Usuario + "')";
             MySqlCommand command = new MySqlCommand(query, Conexion.con);
             command.CommandTimeout = 60;
             MySqlDataReader reader;
@@ -85,47 +86,21 @@ namespace JorgeBeltranANDNemesisSierra.control
                 MessageBox.Show("Registro exitoso.");
                 dataGridView.Rows.Clear();
                 dataGridView.Refresh();
-                llenartablaClientes(dataGridView);
+                llenartablaVenta(dataGridView);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-        /*
-        public void llenaCombo(ComboBox combo)
+        }        
+        //----------------------------------------------------------------------------------
+        //Método para actualizar la tabla de ventas.
+        //----------------------------------------------------------------------------------
+        public void llenartablaVenta(DataGridView tabla)
         {
             try
             {
-                Query = new MySqlCommand(
-                    "Select * from tblusuarios",
-                    conectar());
-                Query.Prepare();
-
-                consultar = Query.ExecuteReader();
-                consultar.Read();
-                while (consultar.Read())
-                {
-                    combo.Items.Add(consultar["usuario"].ToString());
-                }
-            }
-            catch (MySqlException e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            finally
-            {
-                desconectar();
-            }
-        }*///Método para llenar box
-        //----------------------------------------------------------------------------------
-        //Método para actualizar la tabla de clientes.
-        //----------------------------------------------------------------------------------
-        public void llenartablaClientes(DataGridView tabla)
-        {
-            try
-            {
-                Query = new MySqlCommand("Select * from tblclientes",
+                Query = new MySqlCommand("Select * from tblventas",
                     conectar());
                 Query.Prepare();
 
@@ -133,14 +108,14 @@ namespace JorgeBeltranANDNemesisSierra.control
                 tabla.Rows.Clear();
                 while (consultar.Read())
                 {
-                        tabla.Rows.Add(consultar["id"].ToString(),
-                        consultar["nombre"].ToString(),
-                        consultar["apepat"].ToString(),
-                        consultar["apemat"].ToString(),
-                        consultar["domicilio"].ToString(),
-                        consultar["colonia"].ToString(),
-                        consultar["telefono"].ToString(),
-                        consultar["limitecredito"].ToString());
+                    tabla.Rows.Add(consultar["id"].ToString(),
+                    consultar["cantidad"].ToString(),
+                    consultar["precio"].ToString(),
+                    consultar["total"].ToString(),
+                    consultar["producto"].ToString(),
+                    consultar["fecha_venta"].ToString(),
+                    consultar["nom_cliente"].ToString(),
+                    consultar["nom_usuario"].ToString());
                 }
             }
             catch (MySqlException e)
@@ -152,6 +127,6 @@ namespace JorgeBeltranANDNemesisSierra.control
                 desconectar();
             }
         }
-    }   
+    }
 
 }

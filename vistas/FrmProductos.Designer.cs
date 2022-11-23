@@ -245,6 +245,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.TbxID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.TbxID.Enabled = false;
             this.TbxID.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TbxID.Location = new System.Drawing.Point(361, 54);
             this.TbxID.Name = "TbxID";
