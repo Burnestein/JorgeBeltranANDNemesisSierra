@@ -8,7 +8,7 @@ namespace JorgeBeltranANDNemesisSierra.control
     //----------------------------------------------------------------------------------
     //Clase para operaciones CRUD de productos y operar la información.
     //----------------------------------------------------------------------------------
-    public class ControlProductos
+    public class ControlProductos 
     {
         //----------------------------------------------------------------------------------
         //Atributos

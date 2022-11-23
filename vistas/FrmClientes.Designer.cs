@@ -61,6 +61,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.LblColonia = new System.Windows.Forms.Label();
             this.TbxLimiteCredito = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.BtnReporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvClientes)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +70,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             // 
             this.BtnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnLimpiar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.BtnLimpiar.Location = new System.Drawing.Point(144, 287);
+            this.BtnLimpiar.Location = new System.Drawing.Point(110, 284);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(94, 34);
             this.BtnLimpiar.TabIndex = 36;
@@ -119,7 +120,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             // 
             this.BtnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.BtnEliminar.Location = new System.Drawing.Point(631, 287);
+            this.BtnEliminar.Location = new System.Drawing.Point(583, 284);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(94, 34);
             this.BtnEliminar.TabIndex = 32;
@@ -131,7 +132,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             // 
             this.BtnModificar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnModificar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.BtnModificar.Location = new System.Drawing.Point(497, 287);
+            this.BtnModificar.Location = new System.Drawing.Point(463, 284);
             this.BtnModificar.Name = "BtnModificar";
             this.BtnModificar.Size = new System.Drawing.Size(94, 34);
             this.BtnModificar.TabIndex = 31;
@@ -143,7 +144,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             // 
             this.BtnInsertar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnInsertar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.BtnInsertar.Location = new System.Drawing.Point(385, 287);
+            this.BtnInsertar.Location = new System.Drawing.Point(351, 284);
             this.BtnInsertar.Name = "BtnInsertar";
             this.BtnInsertar.Size = new System.Drawing.Size(94, 34);
             this.BtnInsertar.TabIndex = 30;
@@ -155,7 +156,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             // 
             this.BtnActualizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnActualizar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.BtnActualizar.Location = new System.Drawing.Point(264, 287);
+            this.BtnActualizar.Location = new System.Drawing.Point(230, 284);
             this.BtnActualizar.Name = "BtnActualizar";
             this.BtnActualizar.Size = new System.Drawing.Size(94, 34);
             this.BtnActualizar.TabIndex = 29;
@@ -384,11 +385,24 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.label1.TabIndex = 41;
             this.label1.Text = "Limite crédito:";
             // 
+            // BtnReporte
+            // 
+            this.BtnReporte.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BtnReporte.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.BtnReporte.Location = new System.Drawing.Point(703, 284);
+            this.BtnReporte.Name = "BtnReporte";
+            this.BtnReporte.Size = new System.Drawing.Size(94, 34);
+            this.BtnReporte.TabIndex = 95;
+            this.BtnReporte.Text = "Reporte";
+            this.BtnReporte.UseVisualStyleBackColor = true;
+            this.BtnReporte.Click += new System.EventHandler(this.BtnReporte_Click);
+            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(865, 517);
+            this.Controls.Add(this.BtnReporte);
             this.Controls.Add(this.TbxLimiteCredito);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TbxColonia);
@@ -457,5 +471,6 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         private System.Windows.Forms.Label LblColonia;
         private System.Windows.Forms.TextBox TbxLimiteCredito;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BtnReporte;
     }
 }

@@ -190,5 +190,11 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             TbxTelefono.Text = DgvClientes.Rows[sel].Cells[6].Value.ToString();
             TbxLimiteCredito.Text = DgvClientes.Rows[sel].Cells[7].Value.ToString();
         }
+
+        private void BtnReporte_Click(object sender, EventArgs e)
+        {
+            FrmReporteClientes clientazo = new FrmReporteClientes();
+            clientazo.ShowDialog();
+        }
     }
 }

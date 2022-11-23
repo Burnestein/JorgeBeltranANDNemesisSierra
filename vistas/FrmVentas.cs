@@ -210,5 +210,12 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         {
             Calculo();
         }
+
+        private void BtnReporte_Click(object sender, EventArgs e)
+        {
+            FrmReporteVentas ventas = new FrmReporteVentas();
+            ventas.ShowDialog();
+        }
+
     }
 }

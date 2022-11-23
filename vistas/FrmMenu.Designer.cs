@@ -70,7 +70,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.PanelFormularios.Name = "PanelFormularios";
             this.PanelFormularios.Size = new System.Drawing.Size(1170, 510);
             this.PanelFormularios.TabIndex = 1;
-             // 
+            // 
             // PanelMenu
             // 
             this.PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));

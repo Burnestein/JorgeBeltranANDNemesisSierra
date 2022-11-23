@@ -212,5 +212,10 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             TbxDescripcion.Text = "";
         }
 
+        private void BtnReporte_Click(object sender, EventArgs e)
+        {
+            FrmReporteProductos produ = new FrmReporteProductos();
+            produ.ShowDialog();
+        }
     }
 }
