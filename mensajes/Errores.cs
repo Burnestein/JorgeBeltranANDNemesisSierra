@@ -13,5 +13,11 @@ namespace JorgeBeltranANDNemesisSierra.mensajes
         public static String PrecioVenta = "El precio de venta no puede estar vacío.";
         public static String Codigo = "El código del producto no puede estar vacío.";
         public static String Descripcion = "La descripción no puede estar vacía.";
+        //Clientes
+        public static String apePat = " El apellido materno no puede estar vacío.";
+        public static String apeMat = "El precio de venta no puede estar vacío.";
+        public static String domicilio = "El código del producto no puede estar vacío.";
+        public static String oolonia = "La descripción no puede estar vacía.";
+
     }
 }

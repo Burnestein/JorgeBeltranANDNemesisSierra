@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using JorgeBeltranANDNemesisSierra.control;
 using JorgeBeltranANDNemesisSierra.entidades;
+using JorgeBeltranANDNemesisSierra.mensajes;
 using JorgeBeltranANDNemesisSierra.recursos;
 
 namespace JorgeBeltranANDNemesisSierra.vistas
@@ -39,7 +40,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         {
             if (TbxNombre.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + "El nombre no puede estar vacía.";
+                Sesiones.mensajeError = Sesiones.mensajeError + Errores.nombreProduc;
             }
             if (TbxApepat.Text == "")
             {
