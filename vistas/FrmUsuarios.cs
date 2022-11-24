@@ -246,5 +246,11 @@ namespace JorgeBeltranANDNemesisSierra.vistas
                 MessageBox.Show(Sesiones.mensajeError);
             }
         }
+
+        private void BtnReporte_Click(object sender, EventArgs e)
+        {
+            FrmReporteUsuarios user = new FrmReporteUsuarios();
+            user.ShowDialog();
+        }
     }
 }
