@@ -12,12 +12,13 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         int sel;
         public String idSel = "";
         Ventas venta = new Ventas();
+        int bandera = 0;
         public FrmVentas()
         {
             InitializeComponent();
             controlventas.llenaCombo(CbxProductos);
         }
-
+        /*
         public void Calculo()
         {
             if (TbxPrecio.Text != "")
@@ -31,29 +32,18 @@ namespace JorgeBeltranANDNemesisSierra.vistas
                 }
             }
         }
-
+        */
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
-            TbxID.Text = "";
             TbxCantidad.Text = "";
-            TbxPrecio.Text = "";
-            TbxTotal.Text = "";
-            TbxProducto.Text = "";
-            TbxFechaVenta.Text = "";
-            TbxNomCliente.Text = "";
+            CbxProductos.SelectedItem= "Triki Trakes";
         }
 
         private void DgvVentas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             sel = e.RowIndex;
-            idSel = DgvVentas.Rows[sel].Cells[0].Value.ToString();
-            TbxID.Text = DgvVentas.Rows[sel].Cells[0].Value.ToString();
+            CbxProductos.Text = DgvVentas.Rows[sel].Cells[0].Value.ToString();
             TbxCantidad.Text = DgvVentas.Rows[sel].Cells[1].Value.ToString();
-            TbxPrecio.Text = DgvVentas.Rows[sel].Cells[2].Value.ToString();
-            TbxTotal.Text = DgvVentas.Rows[sel].Cells[3].Value.ToString();
-            TbxProducto.Text = DgvVentas.Rows[sel].Cells[4].Value.ToString();
-            TbxFechaVenta.Text = DgvVentas.Rows[sel].Cells[5].Value.ToString();
-            TbxNomCliente.Text = DgvVentas.Rows[sel].Cells[6].Value.ToString();
         }
         /*
         private void BtnActualizar_Click(object sender, EventArgs e)
@@ -190,11 +180,11 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         }
         */
              
-
         private void BtnSeleccionar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("El nombre es: " + CbxProductos.Text.ToString());
-            String valor = CbxProductos.Text.ToString();            
+            String valor = CbxProductos.Text.ToString();
+            String suma_Total;
+            int acum = 0;
 
             venta.Producto = valor;
             venta.Cantidad = Convert.ToInt32(TbxCantidad.Text);
@@ -210,6 +200,15 @@ namespace JorgeBeltranANDNemesisSierra.vistas
                      venta.Subtotal.ToString(),
                      venta.Iva.ToString(),
                    venta.Total.ToString());
+
+            for (int i=0; i<=bandera; i++)
+            {
+                suma_Total = DgvVentas.Rows[i].Cells[5].Value.ToString();
+                acum += Convert.ToInt32(suma_Total);
+            }
+            TbxTotal.Text = acum.ToString();
+            bandera += 1;
         }
+
     }
 }

@@ -94,7 +94,6 @@ namespace JorgeBeltranANDNemesisSierra.control
                 {
                     precio = Convert.ToInt32(consultar["precioVenta"].ToString());
                 }
-                MessageBox.Show("El precio es : " + precio);
             }
             catch (MySqlException e)
             {
