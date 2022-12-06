@@ -92,7 +92,7 @@ namespace JorgeBeltranANDNemesisSierra.control
                 MessageBox.Show(ex.Message);
             }
         }
-        /*
+        
         public void llenaCombo(ComboBox combo)
         {
             try
@@ -117,7 +117,7 @@ namespace JorgeBeltranANDNemesisSierra.control
             {
                 desconectar();
             }
-        }*///Método para llenar box
+        }//Método para llenar box
         //----------------------------------------------------------------------------------
         //Método para actualizar la tabla de clientes.
         //----------------------------------------------------------------------------------

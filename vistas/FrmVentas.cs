@@ -12,12 +12,13 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         int sel;
         public String idSel = "";
         Ventas venta = new Ventas();
+        int bandera = 0;
         public FrmVentas()
         {
             InitializeComponent();
-            controlventas.llenartablaVenta(DgvVentas);            
+            controlventas.llenaCombo(CbxProductos);
         }
-
+        /*
         public void Calculo()
         {
             if (TbxPrecio.Text != "")
@@ -31,33 +32,20 @@ namespace JorgeBeltranANDNemesisSierra.vistas
                 }
             }
         }
-
+        */
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
-            TbxID.Text = "";
             TbxCantidad.Text = "";
-            TbxPrecio.Text = "";
-            TbxTotal.Text = "";
-            TbxProducto.Text = "";
-            TbxFechaVenta.Text = "";
-            TbxNomCliente.Text = "";
-            TbxUsuario.Text = "";
+            CbxProductos.SelectedItem= "Triki Trakes";
         }
 
         private void DgvVentas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             sel = e.RowIndex;
-            idSel = DgvVentas.Rows[sel].Cells[0].Value.ToString();
-            TbxID.Text = DgvVentas.Rows[sel].Cells[0].Value.ToString();
+            CbxProductos.Text = DgvVentas.Rows[sel].Cells[0].Value.ToString();
             TbxCantidad.Text = DgvVentas.Rows[sel].Cells[1].Value.ToString();
-            TbxPrecio.Text = DgvVentas.Rows[sel].Cells[2].Value.ToString();
-            TbxTotal.Text = DgvVentas.Rows[sel].Cells[3].Value.ToString();
-            TbxProducto.Text = DgvVentas.Rows[sel].Cells[4].Value.ToString();
-            TbxFechaVenta.Text = DgvVentas.Rows[sel].Cells[5].Value.ToString();
-            TbxNomCliente.Text = DgvVentas.Rows[sel].Cells[6].Value.ToString();
-            TbxUsuario.Text = DgvVentas.Rows[sel].Cells[7].Value.ToString();
         }
-
+        /*
         private void BtnActualizar_Click(object sender, EventArgs e)
         {
             controlventas.llenartablaVenta(DgvVentas);
@@ -89,10 +77,6 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             {
                 Sesiones.mensajeError = Sesiones.mensajeError + "El nombre del cliente no puede estar vacío.";
             }
-            if (TbxUsuario.Text == "")
-            {
-                Sesiones.mensajeError = Sesiones.mensajeError + "El usuario no puede estar vacía.";
-            }
             if (Sesiones.mensajeError == "")
             {
                 venta.Cantidad = Convert.ToInt32(TbxCantidad.Text);
@@ -101,7 +85,6 @@ namespace JorgeBeltranANDNemesisSierra.vistas
                 venta.Producto = TbxProducto.Text;
                 venta.FechaVenta = TbxFechaVenta.Text;
                 venta.NomCliente = TbxNomCliente.Text;
-                venta.Usuario = TbxUsuario.Text;
                 controlventas.insertarVenta(venta, DgvVentas);
             }
             else
@@ -136,10 +119,6 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             {
                 Sesiones.mensajeError = Sesiones.mensajeError + "El nombre del cliente no puede estar vacío.";
             }
-            if (TbxUsuario.Text == "")
-            {
-                Sesiones.mensajeError = Sesiones.mensajeError + "El usuario no puede estar vacía.";
-            }
             if (Sesiones.mensajeError == "")
             {
                 venta.Cantidad = Convert.ToInt32(TbxCantidad.Text);
@@ -148,7 +127,6 @@ namespace JorgeBeltranANDNemesisSierra.vistas
                 venta.Producto = TbxProducto.Text;
                 venta.FechaVenta = TbxFechaVenta.Text;
                 venta.NomCliente = TbxNomCliente.Text;
-                venta.Usuario = TbxUsuario.Text;
                 venta.Idventas = Convert.ToInt32(idSel);
                 controlventas.insertarVenta(venta, DgvVentas);
             }
@@ -157,7 +135,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
                 MessageBox.Show(Sesiones.mensajeError);
             }
         }
-
+        
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
             if (TbxCantidad.Text == "")
@@ -184,10 +162,6 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             {
                 Sesiones.mensajeError = Sesiones.mensajeError + "El nombre del cliente no puede estar vacío.";
             }
-            if (TbxUsuario.Text == "")
-            {
-                Sesiones.mensajeError = Sesiones.mensajeError + "El usuario no puede estar vacía.";
-            }
             if (Sesiones.mensajeError == "")
             {
                 venta.Cantidad = Convert.ToInt32(TbxCantidad.Text);
@@ -196,7 +170,6 @@ namespace JorgeBeltranANDNemesisSierra.vistas
                 venta.Producto = TbxProducto.Text;
                 venta.FechaVenta = TbxFechaVenta.Text;
                 venta.NomCliente = TbxNomCliente.Text;
-                venta.Usuario = TbxUsuario.Text;
                 venta.Idventas = Convert.ToInt32(idSel);
                 controlventas.insertarVenta(venta, DgvVentas);
             }
@@ -205,16 +178,36 @@ namespace JorgeBeltranANDNemesisSierra.vistas
                 MessageBox.Show(Sesiones.mensajeError);
             }
         }
-
-        private void BtnCalcular_Click(object sender, EventArgs e)
+        */
+             
+        private void BtnSeleccionar_Click(object sender, EventArgs e)
         {
-            Calculo();
-        }
+            String valor = CbxProductos.Text.ToString();
+            String suma_Total;
+            int acum = 0;
 
-        private void BtnReporte_Click(object sender, EventArgs e)
-        {
-            FrmReporteVentas ventas = new FrmReporteVentas();
-            ventas.ShowDialog();
+            venta.Producto = valor;
+            venta.Cantidad = Convert.ToInt32(TbxCantidad.Text);
+
+            venta.Precio = controlventas.Precios(venta.Producto);
+            venta.Subtotal = Convert.ToInt32(venta.Precio * venta.Cantidad);
+            venta.Iva = Convert.ToInt32(venta.Subtotal * 0.16);
+            venta.Total = Convert.ToInt32(venta.Subtotal + venta.Iva);
+
+            DgvVentas.Rows.Add(venta.Producto.ToString(),
+                    venta.Cantidad.ToString(),
+                    venta.Precio.ToString(),
+                     venta.Subtotal.ToString(),
+                     venta.Iva.ToString(),
+                   venta.Total.ToString());
+
+            for (int i=0; i<=bandera; i++)
+            {
+                suma_Total = DgvVentas.Rows[i].Cells[5].Value.ToString();
+                acum += Convert.ToInt32(suma_Total);
+            }
+            TbxTotal.Text = acum.ToString();
+            bandera += 1;
         }
 
     }

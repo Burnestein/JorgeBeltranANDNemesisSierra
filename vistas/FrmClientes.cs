@@ -17,6 +17,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         {
             InitializeComponent();
             controlclientes.llenartablaClientes(DgvClientes);
+            controlclientes.llenaCombo(CbxClientes);
         }
 
         private void BtnLimpiar_Click(object sender, EventArgs e)
@@ -196,6 +197,11 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         {
             FrmReporteClientes clientazo = new FrmReporteClientes();
             clientazo.ShowDialog();
+        }
+
+        private void CbxClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

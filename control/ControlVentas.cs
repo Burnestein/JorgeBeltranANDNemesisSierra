@@ -16,83 +16,8 @@ namespace JorgeBeltranANDNemesisSierra.control
         //----------------------------------------------------------------------------------
         //Método para eliminar ventas.
         //----------------------------------------------------------------------------------
-        public void eliminarVenta(Ventas venta, DataGridView dataGridView)
-        {
-            conectar();
-            string query = "delete from tblventas where id='" + venta.Idventas + "';";
-            MySqlCommand command = new MySqlCommand(query, Conexion.con);
-            command.CommandTimeout = 60;
-            MySqlDataReader reader;
-            try
-            {
-                reader = command.ExecuteReader();
-                desconectar();
-                MessageBox.Show("Eliminación exitosa.");
-                dataGridView.Rows.Clear();
-                dataGridView.Refresh();
-                llenartablaVenta(dataGridView);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        //----------------------------------------------------------------------------------
-        //Método para modificar ventas.
-        //----------------------------------------------------------------------------------
-        public void modificarVenta(Ventas venta, DataGridView dataGridView)
-        {
-            conectar();
-            string query = "update tblventas set " +
-                "cantidad='" + venta.Cantidad + "', precio='" + venta.Precio + "'," +
-                "total='" + venta.Total + "', producto='" + venta.Producto + "', fecha_venta='" + venta.FechaVenta
-                + "', nom_cliente='" + venta.NomCliente + "', nom_usuario='" + venta.Usuario
-                + "' where id='" + venta.Idventas + "';";
-            MySqlCommand command = new MySqlCommand(query, Conexion.con);
-            command.CommandTimeout = 60;
-            MySqlDataReader reader;
-            try
-            {
-                reader = command.ExecuteReader();
-                desconectar();
-                MessageBox.Show("Modificación exitosa.");
-                dataGridView.Rows.Clear();
-                dataGridView.Refresh();
-                llenartablaVenta(dataGridView);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        //----------------------------------------------------------------------------------
-        //Método para registrar ventas.
-        //----------------------------------------------------------------------------------
-        public void insertarVenta(Ventas venta, DataGridView dataGridView)
-        {
-            conectar();
-            string query = "insert into tblventas " +
-                "(cantidad, precio, total, producto, fecha_venta, nom_cliente, nom_usuario)values " +
-                "('" + venta.Cantidad + "', '" + venta.Precio + "', '" + venta.Total + "'" +
-                ",'" + venta.Producto + "','" + venta.FechaVenta + "','" + venta.NomCliente + "'" +
-                ",'" + venta.Usuario + "')";
-            MySqlCommand command = new MySqlCommand(query, Conexion.con);
-            command.CommandTimeout = 60;
-            MySqlDataReader reader;
-            try
-            {
-                reader = command.ExecuteReader();
-                desconectar();
-                MessageBox.Show("Registro exitoso.");
-                dataGridView.Rows.Clear();
-                dataGridView.Refresh();
-                llenartablaVenta(dataGridView);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }        
+        
+        
         //----------------------------------------------------------------------------------
         //Método para actualizar la tabla de ventas.
         //----------------------------------------------------------------------------------
@@ -127,6 +52,59 @@ namespace JorgeBeltranANDNemesisSierra.control
                 desconectar();
             }
         }
-    }
 
+        public void llenaCombo(ComboBox combo)
+        {
+            try
+            {
+                Query = new MySqlCommand(
+                    "Select nombreProducto from tblproductos",
+                    conectar());
+                Query.Prepare();
+
+                consultar = Query.ExecuteReader();
+                
+                while (consultar.Read())
+                {
+                    consultar.Read();
+                    combo.Items.Add(consultar["nombreProducto"].ToString());
+                }
+            }
+            catch (MySqlException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally
+            {
+                desconectar();
+            }
+        }
+
+        public int Precios(String nombreProducto)
+        {
+            int precio = 0;
+            try
+            {
+                Query = new MySqlCommand("Select precioVenta from tblproductos where nombreProducto='" + nombreProducto + "';",
+                    conectar());
+                Query.Prepare();
+
+                consultar = Query.ExecuteReader();
+                while (consultar.Read())
+                {
+                    precio = Convert.ToInt32(consultar["precioVenta"].ToString());
+                }
+            }
+            catch (MySqlException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally
+            {
+                desconectar();
+            }
+            return precio;
+        }
+
+    }
 }
