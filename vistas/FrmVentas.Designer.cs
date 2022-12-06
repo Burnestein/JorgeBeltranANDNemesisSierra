@@ -29,18 +29,12 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         /// </summary>
         private void InitializeComponent()
         {
-            this.TbxUsuario = new System.Windows.Forms.TextBox();
-            this.LblUsuario = new System.Windows.Forms.Label();
             this.TbxFechaVenta = new System.Windows.Forms.TextBox();
             this.LblFechaVenta = new System.Windows.Forms.Label();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.TbxID = new System.Windows.Forms.TextBox();
             this.LblID = new System.Windows.Forms.Label();
             this.LblHeader = new System.Windows.Forms.Label();
-            this.BtnEliminar = new System.Windows.Forms.Button();
-            this.BtnModificar = new System.Windows.Forms.Button();
-            this.BtnInsertar = new System.Windows.Forms.Button();
-            this.BtnActualizar = new System.Windows.Forms.Button();
             this.TbxProducto = new System.Windows.Forms.TextBox();
             this.TbxNomCliente = new System.Windows.Forms.TextBox();
             this.TbxTotal = new System.Windows.Forms.TextBox();
@@ -52,44 +46,17 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.TbxCantidad = new System.Windows.Forms.TextBox();
             this.LblCantidad = new System.Windows.Forms.Label();
             this.DgvVentas = new System.Windows.Forms.DataGridView();
-            this.id_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apepat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apemat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.domicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colonia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.limitecredito = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BtnCalcular = new System.Windows.Forms.Button();
-            this.BtnReporte = new System.Windows.Forms.Button();
+            this.apepat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apemat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.domicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnAñadir = new System.Windows.Forms.Button();
+            this.CbxProductos = new System.Windows.Forms.ComboBox();
+            this.BtnSeleccionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvVentas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // TbxUsuario
-            // 
-            this.TbxUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TbxUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.TbxUsuario.Location = new System.Drawing.Point(421, 82);
-            this.TbxUsuario.Name = "TbxUsuario";
-            this.TbxUsuario.Size = new System.Drawing.Size(140, 23);
-            this.TbxUsuario.TabIndex = 66;
-            // 
-            // LblUsuario
-            // 
-            this.LblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblUsuario.AutoSize = true;
-            this.LblUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblUsuario.Location = new System.Drawing.Point(462, 52);
-            this.LblUsuario.Name = "LblUsuario";
-            this.LblUsuario.Size = new System.Drawing.Size(58, 17);
-            this.LblUsuario.TabIndex = 65;
-            this.LblUsuario.Text = "Usuario:";
             // 
             // TbxFechaVenta
             // 
@@ -97,7 +64,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TbxFechaVenta.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.TbxFechaVenta.Location = new System.Drawing.Point(192, 216);
+            this.TbxFechaVenta.Location = new System.Drawing.Point(561, 82);
             this.TbxFechaVenta.Name = "TbxFechaVenta";
             this.TbxFechaVenta.Size = new System.Drawing.Size(204, 23);
             this.TbxFechaVenta.TabIndex = 64;
@@ -106,7 +73,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             // 
             this.LblFechaVenta.AutoSize = true;
             this.LblFechaVenta.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.LblFechaVenta.Location = new System.Drawing.Point(13, 222);
+            this.LblFechaVenta.Location = new System.Drawing.Point(425, 88);
             this.LblFechaVenta.Name = "LblFechaVenta";
             this.LblFechaVenta.Size = new System.Drawing.Size(130, 17);
             this.LblFechaVenta.TabIndex = 63;
@@ -116,7 +83,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             // 
             this.BtnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnLimpiar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.BtnLimpiar.Location = new System.Drawing.Point(143, 287);
+            this.BtnLimpiar.Location = new System.Drawing.Point(192, 195);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(94, 34);
             this.BtnLimpiar.TabIndex = 60;
@@ -129,7 +96,6 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.TbxID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TbxID.Enabled = false;
             this.TbxID.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TbxID.Location = new System.Drawing.Point(192, 49);
             this.TbxID.Name = "TbxID";
@@ -162,61 +128,13 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.LblHeader.TabIndex = 57;
             this.LblHeader.Text = "Datos de ventas";
             // 
-            // BtnEliminar
-            // 
-            this.BtnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BtnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.BtnEliminar.Location = new System.Drawing.Point(630, 287);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(94, 34);
-            this.BtnEliminar.TabIndex = 56;
-            this.BtnEliminar.Text = "Eliminar";
-            this.BtnEliminar.UseVisualStyleBackColor = true;
-            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
-            // 
-            // BtnModificar
-            // 
-            this.BtnModificar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BtnModificar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.BtnModificar.Location = new System.Drawing.Point(511, 287);
-            this.BtnModificar.Name = "BtnModificar";
-            this.BtnModificar.Size = new System.Drawing.Size(94, 34);
-            this.BtnModificar.TabIndex = 55;
-            this.BtnModificar.Text = "Modificar";
-            this.BtnModificar.UseVisualStyleBackColor = true;
-            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
-            // 
-            // BtnInsertar
-            // 
-            this.BtnInsertar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BtnInsertar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.BtnInsertar.Location = new System.Drawing.Point(384, 287);
-            this.BtnInsertar.Name = "BtnInsertar";
-            this.BtnInsertar.Size = new System.Drawing.Size(94, 34);
-            this.BtnInsertar.TabIndex = 54;
-            this.BtnInsertar.Text = "Insertar";
-            this.BtnInsertar.UseVisualStyleBackColor = true;
-            this.BtnInsertar.Click += new System.EventHandler(this.BtnInsertar_Click);
-            // 
-            // BtnActualizar
-            // 
-            this.BtnActualizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BtnActualizar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.BtnActualizar.Location = new System.Drawing.Point(263, 287);
-            this.BtnActualizar.Name = "BtnActualizar";
-            this.BtnActualizar.Size = new System.Drawing.Size(94, 34);
-            this.BtnActualizar.TabIndex = 53;
-            this.BtnActualizar.Text = "Actualizar";
-            this.BtnActualizar.UseVisualStyleBackColor = true;
-            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
-            // 
             // TbxProducto
             // 
             this.TbxProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TbxProducto.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.TbxProducto.Location = new System.Drawing.Point(192, 187);
+            this.TbxProducto.Location = new System.Drawing.Point(192, 122);
             this.TbxProducto.Name = "TbxProducto";
             this.TbxProducto.Size = new System.Drawing.Size(204, 23);
             this.TbxProducto.TabIndex = 52;
@@ -227,7 +145,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TbxNomCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.TbxNomCliente.Location = new System.Drawing.Point(192, 244);
+            this.TbxNomCliente.Location = new System.Drawing.Point(192, 157);
             this.TbxNomCliente.Name = "TbxNomCliente";
             this.TbxNomCliente.Size = new System.Drawing.Size(204, 23);
             this.TbxNomCliente.TabIndex = 51;
@@ -238,7 +156,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TbxTotal.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.TbxTotal.Location = new System.Drawing.Point(192, 158);
+            this.TbxTotal.Location = new System.Drawing.Point(561, 49);
             this.TbxTotal.Name = "TbxTotal";
             this.TbxTotal.Size = new System.Drawing.Size(204, 23);
             this.TbxTotal.TabIndex = 50;
@@ -249,7 +167,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TbxPrecio.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.TbxPrecio.Location = new System.Drawing.Point(192, 123);
+            this.TbxPrecio.Location = new System.Drawing.Point(192, 82);
             this.TbxPrecio.Name = "TbxPrecio";
             this.TbxPrecio.Size = new System.Drawing.Size(204, 23);
             this.TbxPrecio.TabIndex = 49;
@@ -258,7 +176,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             // 
             this.LblProducto.AutoSize = true;
             this.LblProducto.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.LblProducto.Location = new System.Drawing.Point(13, 187);
+            this.LblProducto.Location = new System.Drawing.Point(12, 125);
             this.LblProducto.Name = "LblProducto";
             this.LblProducto.Size = new System.Drawing.Size(72, 17);
             this.LblProducto.TabIndex = 48;
@@ -268,7 +186,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             // 
             this.LblNomCliente.AutoSize = true;
             this.LblNomCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.LblNomCliente.Location = new System.Drawing.Point(13, 250);
+            this.LblNomCliente.Location = new System.Drawing.Point(13, 157);
             this.LblNomCliente.Name = "LblNomCliente";
             this.LblNomCliente.Size = new System.Drawing.Size(136, 17);
             this.LblNomCliente.TabIndex = 47;
@@ -278,7 +196,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             // 
             this.LblTotal.AutoSize = true;
             this.LblTotal.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.LblTotal.Location = new System.Drawing.Point(13, 158);
+            this.LblTotal.Location = new System.Drawing.Point(425, 52);
             this.LblTotal.Name = "LblTotal";
             this.LblTotal.Size = new System.Drawing.Size(43, 17);
             this.LblTotal.TabIndex = 46;
@@ -288,7 +206,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             // 
             this.LblPrecio.AutoSize = true;
             this.LblPrecio.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.LblPrecio.Location = new System.Drawing.Point(13, 121);
+            this.LblPrecio.Location = new System.Drawing.Point(13, 85);
             this.LblPrecio.Name = "LblPrecio";
             this.LblPrecio.Size = new System.Drawing.Size(52, 17);
             this.LblPrecio.TabIndex = 45;
@@ -300,9 +218,9 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TbxCantidad.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.TbxCantidad.Location = new System.Drawing.Point(192, 82);
+            this.TbxCantidad.Location = new System.Drawing.Point(581, 215);
             this.TbxCantidad.Name = "TbxCantidad";
-            this.TbxCantidad.Size = new System.Drawing.Size(204, 23);
+            this.TbxCantidad.Size = new System.Drawing.Size(70, 23);
             this.TbxCantidad.TabIndex = 44;
             // 
             // LblCantidad
@@ -312,7 +230,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LblCantidad.AutoSize = true;
             this.LblCantidad.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.LblCantidad.Location = new System.Drawing.Point(13, 82);
+            this.LblCantidad.Location = new System.Drawing.Point(578, 195);
             this.LblCantidad.Name = "LblCantidad";
             this.LblCantidad.Size = new System.Drawing.Size(75, 17);
             this.LblCantidad.TabIndex = 43;
@@ -322,114 +240,93 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             // 
             this.DgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_usuario,
-            this.apepat,
-            this.apemat,
-            this.domicilio,
             this.colonia,
-            this.telefono,
-            this.nombre,
-            this.limitecredito});
-            this.DgvVentas.Location = new System.Drawing.Point(4, 330);
+            this.apepat,
+            this.precio,
+            this.apemat,
+            this.iva,
+            this.domicilio});
+            this.DgvVentas.Location = new System.Drawing.Point(92, 276);
             this.DgvVentas.Name = "DgvVentas";
-            this.DgvVentas.Size = new System.Drawing.Size(841, 150);
+            this.DgvVentas.Size = new System.Drawing.Size(646, 150);
             this.DgvVentas.TabIndex = 62;
             this.DgvVentas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvVentas_CellClick);
-            // 
-            // id_usuario
-            // 
-            this.id_usuario.HeaderText = "ID ";
-            this.id_usuario.Name = "id_usuario";
-            // 
-            // apepat
-            // 
-            this.apepat.HeaderText = "Cantidad:";
-            this.apepat.Name = "apepat";
-            // 
-            // apemat
-            // 
-            this.apemat.HeaderText = "Precio:";
-            this.apemat.Name = "apemat";
-            // 
-            // domicilio
-            // 
-            this.domicilio.HeaderText = "Total";
-            this.domicilio.Name = "domicilio";
             // 
             // colonia
             // 
             this.colonia.HeaderText = "Producto";
             this.colonia.Name = "colonia";
             // 
-            // telefono
+            // apepat
             // 
-            this.telefono.HeaderText = "Fecha de la venta";
-            this.telefono.Name = "telefono";
+            this.apepat.HeaderText = "Cantidad:";
+            this.apepat.Name = "apepat";
             // 
-            // nombre
+            // precio
             // 
-            this.nombre.HeaderText = "Nombre del cliente:";
-            this.nombre.Name = "nombre";
+            this.precio.HeaderText = "Precio";
+            this.precio.Name = "precio";
             // 
-            // limitecredito
+            // apemat
             // 
-            this.limitecredito.HeaderText = "Usuario";
-            this.limitecredito.Name = "limitecredito";
+            this.apemat.HeaderText = "Subtotal:";
+            this.apemat.Name = "apemat";
             // 
-            // pictureBox1
+            // iva
             // 
-            this.pictureBox1.Image = global::JorgeBeltranANDNemesisSierra.Properties.Resources.nasa;
-            this.pictureBox1.Location = new System.Drawing.Point(591, 43);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(247, 204);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 61;
-            this.pictureBox1.TabStop = false;
+            this.iva.HeaderText = "IVA";
+            this.iva.Name = "iva";
             // 
-            // BtnCalcular
+            // domicilio
             // 
-            this.BtnCalcular.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BtnCalcular.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.BtnCalcular.Location = new System.Drawing.Point(440, 123);
-            this.BtnCalcular.Name = "BtnCalcular";
-            this.BtnCalcular.Size = new System.Drawing.Size(94, 34);
-            this.BtnCalcular.TabIndex = 67;
-            this.BtnCalcular.Text = "Calcular";
-            this.BtnCalcular.UseVisualStyleBackColor = true;
-            this.BtnCalcular.Click += new System.EventHandler(this.BtnCalcular_Click);
+            this.domicilio.HeaderText = "Total";
+            this.domicilio.Name = "domicilio";
             // 
-            // BtnReporte
+            // BtnAñadir
             // 
-            this.BtnReporte.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BtnReporte.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.BtnReporte.Location = new System.Drawing.Point(440, 222);
-            this.BtnReporte.Name = "BtnReporte";
-            this.BtnReporte.Size = new System.Drawing.Size(94, 34);
-            this.BtnReporte.TabIndex = 68;
-            this.BtnReporte.Text = "Reporte";
-            this.BtnReporte.UseVisualStyleBackColor = true;
-            this.BtnReporte.Click += new System.EventHandler(this.BtnReporte_Click);
+            this.BtnAñadir.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BtnAñadir.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.BtnAñadir.Location = new System.Drawing.Point(81, 195);
+            this.BtnAñadir.Name = "BtnAñadir";
+            this.BtnAñadir.Size = new System.Drawing.Size(94, 34);
+            this.BtnAñadir.TabIndex = 65;
+            this.BtnAñadir.Text = "Añadir";
+            this.BtnAñadir.UseVisualStyleBackColor = true;
+            // 
+            // CbxProductos
+            // 
+            this.CbxProductos.FormattingEnabled = true;
+            this.CbxProductos.Location = new System.Drawing.Point(440, 195);
+            this.CbxProductos.Name = "CbxProductos";
+            this.CbxProductos.Size = new System.Drawing.Size(121, 21);
+            this.CbxProductos.TabIndex = 66;
+            // 
+            // BtnSeleccionar
+            // 
+            this.BtnSeleccionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSeleccionar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.BtnSeleccionar.Location = new System.Drawing.Point(669, 187);
+            this.BtnSeleccionar.Name = "BtnSeleccionar";
+            this.BtnSeleccionar.Size = new System.Drawing.Size(94, 34);
+            this.BtnSeleccionar.TabIndex = 67;
+            this.BtnSeleccionar.Text = "Seleccionar";
+            this.BtnSeleccionar.UseVisualStyleBackColor = true;
+            this.BtnSeleccionar.Click += new System.EventHandler(this.BtnSeleccionar_Click);
             // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(849, 478);
-            this.Controls.Add(this.BtnReporte);
-            this.Controls.Add(this.BtnCalcular);
-            this.Controls.Add(this.TbxUsuario);
-            this.Controls.Add(this.LblUsuario);
+            this.Controls.Add(this.BtnSeleccionar);
+            this.Controls.Add(this.CbxProductos);
+            this.Controls.Add(this.BtnAñadir);
             this.Controls.Add(this.TbxFechaVenta);
             this.Controls.Add(this.LblFechaVenta);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnLimpiar);
             this.Controls.Add(this.TbxID);
             this.Controls.Add(this.LblID);
             this.Controls.Add(this.LblHeader);
-            this.Controls.Add(this.BtnEliminar);
-            this.Controls.Add(this.BtnModificar);
-            this.Controls.Add(this.BtnInsertar);
-            this.Controls.Add(this.BtnActualizar);
             this.Controls.Add(this.TbxProducto);
             this.Controls.Add(this.TbxNomCliente);
             this.Controls.Add(this.TbxTotal);
@@ -445,27 +342,18 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.Name = "FrmVentas";
             this.Text = "FrmVentas";
             ((System.ComponentModel.ISupportInitialize)(this.DgvVentas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox TbxUsuario;
-        private System.Windows.Forms.Label LblUsuario;
         private System.Windows.Forms.TextBox TbxFechaVenta;
         private System.Windows.Forms.Label LblFechaVenta;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnLimpiar;
         private System.Windows.Forms.TextBox TbxID;
         private System.Windows.Forms.Label LblID;
         private System.Windows.Forms.Label LblHeader;
-        private System.Windows.Forms.Button BtnEliminar;
-        private System.Windows.Forms.Button BtnModificar;
-        private System.Windows.Forms.Button BtnInsertar;
-        private System.Windows.Forms.Button BtnActualizar;
         private System.Windows.Forms.TextBox TbxProducto;
         private System.Windows.Forms.TextBox TbxNomCliente;
         private System.Windows.Forms.TextBox TbxTotal;
@@ -477,15 +365,14 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         private System.Windows.Forms.TextBox TbxCantidad;
         private System.Windows.Forms.Label LblCantidad;
         private System.Windows.Forms.DataGridView DgvVentas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apepat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apemat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn domicilio;
+        private System.Windows.Forms.Button BtnAñadir;
+        private System.Windows.Forms.ComboBox CbxProductos;
+        private System.Windows.Forms.Button BtnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colonia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn limitecredito;
-        private System.Windows.Forms.Button BtnCalcular;
-        private System.Windows.Forms.Button BtnReporte;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apepat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apemat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iva;
+        private System.Windows.Forms.DataGridViewTextBoxColumn domicilio;
     }
 }
