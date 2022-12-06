@@ -65,8 +65,7 @@ namespace JorgeBeltranANDNemesisSierra.control
                 consultar = Query.ExecuteReader();
                 
                 while (consultar.Read())
-                {
-                    consultar.Read();
+                {                    
                     combo.Items.Add(consultar["nombreProducto"].ToString());
                 }
             }

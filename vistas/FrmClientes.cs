@@ -17,7 +17,6 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         {
             InitializeComponent();
             controlclientes.llenartablaClientes(DgvClientes);
-            controlclientes.llenaCombo(CbxClientes);
         }
 
         private void BtnLimpiar_Click(object sender, EventArgs e)

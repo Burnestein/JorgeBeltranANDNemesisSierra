@@ -103,7 +103,6 @@ namespace JorgeBeltranANDNemesisSierra.control
                 Query.Prepare();
 
                 consultar = Query.ExecuteReader();
-                consultar.Read();
                 while (consultar.Read())
                 {
                     combo.Items.Add(consultar["usuario"].ToString());
