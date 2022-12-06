@@ -67,12 +67,6 @@
     <Compile Include="control\controlProveedores.cs" />
     <Compile Include="control\ControlUsuarios.cs" />
     <Compile Include="control\ControlVentas.cs" />
-    <Compile Include="DanielReporte.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DanielReporte.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="entidades\Clientes.cs" />
     <Compile Include="entidades\Persona.cs" />
     <Compile Include="entidades\Productos.cs" />
@@ -124,12 +118,6 @@
     </Compile>
     <Compile Include="vistas\FrmClientes.Designer.cs">
       <DependentUpon>FrmClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="vistas\FrmDaniel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vistas\FrmDaniel.Designer.cs">
-      <DependentUpon>FrmDaniel.cs</DependentUpon>
     </Compile>
     <Compile Include="vistas\FrmMenu.cs">
       <SubType>Form</SubType>
@@ -191,10 +179,6 @@
     <Compile Include="vistas\FrmVentas.Designer.cs">
       <DependentUpon>FrmVentas.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DanielReporte.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>DanielReporte.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,9 +214,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vistas\FrmDaniel.resx">
-      <DependentUpon>FrmDaniel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
