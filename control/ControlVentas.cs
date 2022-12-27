@@ -13,9 +13,6 @@ namespace JorgeBeltranANDNemesisSierra.control
     {
         MySqlCommand Query = new MySqlCommand();//Para preparar la consulta y guardar los datos
         MySqlDataReader consultar;//Para consultar a la base
-        //----------------------------------------------------------------------------------
-        //Método para eliminar ventas.
-        //----------------------------------------------------------------------------------
         
         
         //----------------------------------------------------------------------------------

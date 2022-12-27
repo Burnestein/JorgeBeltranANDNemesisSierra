@@ -205,6 +205,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.TbxApemat.Name = "TbxApemat";
             this.TbxApemat.Size = new System.Drawing.Size(240, 23);
             this.TbxApemat.TabIndex = 47;
+            this.TbxApemat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxApemat_KeyPress);
             // 
             // TbxApepat
             // 
@@ -216,6 +217,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.TbxApepat.Name = "TbxApepat";
             this.TbxApepat.Size = new System.Drawing.Size(240, 23);
             this.TbxApepat.TabIndex = 46;
+            this.TbxApepat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxApepat_KeyPress);
             // 
             // LblCalle
             // 
@@ -267,6 +269,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.TbxNombre.Name = "TbxNombre";
             this.TbxNombre.Size = new System.Drawing.Size(240, 23);
             this.TbxNombre.TabIndex = 41;
+            this.TbxNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxNombre_KeyPress);
             // 
             // LblNombre
             // 
@@ -301,6 +304,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.DgvUsuarios.Size = new System.Drawing.Size(1146, 150);
             this.DgvUsuarios.TabIndex = 59;
             this.DgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUsuarios_CellClick);
+            this.DgvUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DgvUsuarios_MouseClick);
             // 
             // id_cliente
             // 
@@ -426,6 +430,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.TbxEstado.Name = "TbxEstado";
             this.TbxEstado.Size = new System.Drawing.Size(240, 23);
             this.TbxEstado.TabIndex = 68;
+            this.TbxEstado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxEstado_KeyPress);
             // 
             // TbxColonia
             // 
@@ -437,6 +442,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.TbxColonia.Name = "TbxColonia";
             this.TbxColonia.Size = new System.Drawing.Size(240, 23);
             this.TbxColonia.TabIndex = 67;
+            this.TbxColonia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxColonia_KeyPress);
             // 
             // label3
             // 

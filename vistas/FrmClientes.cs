@@ -44,27 +44,27 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             }
             if (TbxApepat.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + "El Apellido paterno no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + Errores.apePat;
             }
             if (TbxApemat.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + "El Apellido materno no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + Errores.apeMat;
             }
             if (TbxDomicilio.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + "El domiclio no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + Errores.domicilio;
             }
             if (TbxColonia.Text == "")
             {                
-                Sesiones.mensajeError = Sesiones.mensajeError + "La colonia no puede estar vacía.";
+                Sesiones.mensajeError = Sesiones.mensajeError + Errores.colonia;
             }
             if (TbxTelefono.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + "El teléfono no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + Errores.telefono;
             }
             if (TbxLimiteCredito.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + "El limite de crédito no puede estar vacía.";
+                Sesiones.mensajeError = Sesiones.mensajeError + Errores.LimiteCredito;
             }
             if (Sesiones.mensajeError == "")
             {
@@ -86,31 +86,31 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         {
             if (TbxNombre.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + "El nombre no puede estar vacía.";
+                Sesiones.mensajeError = Sesiones.mensajeError + Errores.nombreProduc;
             }
             if (TbxApepat.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + "El Apellido paterno no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + Errores.apePat;
             }
             if (TbxApemat.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + "El Apellido materno no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + Errores.apeMat;
             }
             if (TbxDomicilio.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + "El domiclio no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + Errores.domicilio;
             }
             if (TbxColonia.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + "La colonia no puede estar vacía.";
+                Sesiones.mensajeError = Sesiones.mensajeError + Errores.colonia;
             }
             if (TbxTelefono.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + "El teléfono no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + Errores.telefono;
             }
             if (TbxLimiteCredito.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + "El limite de crédito no puede estar vacía.";
+                Sesiones.mensajeError = Sesiones.mensajeError + Errores.LimiteCredito;
             }
             if (Sesiones.mensajeError == "")
             {
@@ -134,31 +134,31 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         {
             if (TbxNombre.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + "El nombre no puede estar vacía.";
+                Sesiones.mensajeError = Sesiones.mensajeError + Errores.nombreProduc;
             }
             if (TbxApepat.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + "El Apellido paterno no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + Errores.apePat;
             }
             if (TbxApemat.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + "El Apellido materno no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + Errores.apeMat;
             }
             if (TbxDomicilio.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + "El domiclio no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + Errores.domicilio;
             }
             if (TbxColonia.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + "La colonia no puede estar vacía.";
+                Sesiones.mensajeError = Sesiones.mensajeError + Errores.colonia;
             }
             if (TbxTelefono.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + "El teléfono no puede estar vacío.";
+                Sesiones.mensajeError = Sesiones.mensajeError + Errores.telefono;
             }
             if (TbxLimiteCredito.Text == "")
             {
-                Sesiones.mensajeError = Sesiones.mensajeError + "El limite de crédito no puede estar vacía.";
+                Sesiones.mensajeError = Sesiones.mensajeError + Errores.LimiteCredito;
             }
             if (Sesiones.mensajeError == "")
             {
@@ -202,5 +202,76 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         {
 
         }
+
+        private void TbxNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloLetras(e);
+        }
+
+        private void TbxApepat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloLetras(e);
+        }
+
+        private void TbxApemat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloLetras(e);
+        }
+
+        private void DgvClientes_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                ContextMenuStrip menu = new System.Windows.Forms.ContextMenuStrip();
+                int posicion = DgvClientes.HitTest(e.X, e.Y).RowIndex;
+                if (posicion > -1)
+                {
+                    menu.Items.Add("Borrar").Name = "Borrar" + posicion;
+                    menu.Items.Add("Mostrar").Name = "Mostrar" + posicion;
+                }
+                menu.Show(DgvClientes, e.X, e.Y);
+                menu.ItemClicked += new ToolStripItemClickedEventHandler(menuclick);
+            }
+        }
+
+        //----------------------------------------------------------------------------------
+        //Menú desplegable
+        //Pendiente.
+        //----------------------------------------------------------------------------------
+        private void menuclick(object sender, ToolStripItemClickedEventArgs e)
+        {
+            string id2 = e.ClickedItem.Name.ToString();
+            string idSel = "";
+            if (id2.Contains("Borrar"))
+            {
+                id2 = id2.Replace("Borrar", "");
+                idSel = DgvClientes.Rows[int.Parse(id2)].Cells[0].Value.ToString();
+                Borrar(int.Parse(idSel));
+            }
+            if (id2.Contains("Mostrar"))
+            {
+                id2 = id2.Replace("Mostrar", "");
+                Mostrar(int.Parse(id2));
+            }
+        }
+
+        private void Mostrar(int idMostrar)
+        {
+            String res = "ID del cliente = " + DgvClientes.Rows[idMostrar].Cells[0].Value.ToString() + "\n";
+            res = res + "Nombre del cliente = " + DgvClientes.Rows[idMostrar].Cells[1].Value.ToString() + "\n";
+            res = res + "Apellido Paterno del cliente = " + DgvClientes.Rows[idMostrar].Cells[2].Value.ToString() + "\n";
+            res = res + "Apellido Materno del cliente = " + DgvClientes.Rows[idMostrar].Cells[3].Value.ToString() + "\n";
+            res = res + "Domicilio del cliente = " + DgvClientes.Rows[idMostrar].Cells[4].Value.ToString() + "\n";
+            res = res + "Colonia del cliente = " + DgvClientes.Rows[idMostrar].Cells[5].Value.ToString() + "\n";
+            res = res + "Télefono del cliente = " + DgvClientes.Rows[idMostrar].Cells[6].Value.ToString() + "\n";
+            res = res + "Límite de crédito del cliente = " + DgvClientes.Rows[idMostrar].Cells[7].Value.ToString() + "\n";
+            MessageBox.Show(res);
+        }
+
+        private void Borrar(int idBorrar)
+        {
+            controlclientes.EliminarSelc(idBorrar, DgvClientes);
+        }
+
     }
 }

@@ -16,7 +16,8 @@ namespace JorgeBeltranANDNemesisSierra
         public Form1()
         {
             InitializeComponent();
-            //CargarImagen();
+            CargarImagen();
+            Cursor.Current = Cursors.Default;
         }
         
         public void CargarImagen()
@@ -28,6 +29,7 @@ namespace JorgeBeltranANDNemesisSierra
         {
             usuario.Usuarios = TbxUsuario.Text;
             usuario.Contra = TbxContrasena.Text;
+            Cursor.Current = Cursors.Default;
             byte existe = control.ValidarUsuarios(usuario);
             if (existe == 1)
             {

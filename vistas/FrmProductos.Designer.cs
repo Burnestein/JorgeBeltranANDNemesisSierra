@@ -82,6 +82,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.TbxNombreProd.Name = "TbxNombreProd";
             this.TbxNombreProd.Size = new System.Drawing.Size(204, 23);
             this.TbxNombreProd.TabIndex = 1;
+            this.TbxNombreProd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxNombreProd_KeyPress);
             // 
             // label1
             // 
@@ -155,6 +156,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.TbxCodigo.Name = "TbxCodigo";
             this.TbxCodigo.Size = new System.Drawing.Size(204, 23);
             this.TbxCodigo.TabIndex = 8;
+            this.TbxCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxCodigo_KeyPress);
             // 
             // TbxDescripcion
             // 
