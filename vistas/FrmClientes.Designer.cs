@@ -196,6 +196,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.TbxApemat.Name = "TbxApemat";
             this.TbxApemat.Size = new System.Drawing.Size(204, 23);
             this.TbxApemat.TabIndex = 26;
+            this.TbxApemat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxApemat_KeyPress);
             // 
             // TbxApepat
             // 
@@ -207,6 +208,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.TbxApepat.Name = "TbxApepat";
             this.TbxApepat.Size = new System.Drawing.Size(204, 23);
             this.TbxApepat.TabIndex = 25;
+            this.TbxApepat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxApepat_KeyPress);
             // 
             // LblCalle
             // 
@@ -258,6 +260,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.TbxNombre.Name = "TbxNombre";
             this.TbxNombre.Size = new System.Drawing.Size(204, 23);
             this.TbxNombre.TabIndex = 20;
+            this.TbxNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxNombre_KeyPress);
             // 
             // LblNombre
             // 
@@ -299,6 +302,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.DgvClientes.Size = new System.Drawing.Size(841, 150);
             this.DgvClientes.TabIndex = 38;
             this.DgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvClientes_CellClick);
+            this.DgvClientes.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DgvClientes_MouseClick);
             // 
             // id_cliente
             // 

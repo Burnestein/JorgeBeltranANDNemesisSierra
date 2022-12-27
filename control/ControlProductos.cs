@@ -129,5 +129,26 @@ namespace JorgeBeltranANDNemesisSierra.control
                 MessageBox.Show(ex.Message);
             }
         }
+        public void EliminarSelc(int idMostrar, DataGridView dataGridView)
+        {
+            conexion.conectar();
+            string query = "delete from tblproductos where id='" + idMostrar + "';";
+            MySqlCommand command = new MySqlCommand(query, Conexion.con);
+            command.CommandTimeout = 60;
+            MySqlDataReader reader;
+            try
+            {
+                reader = command.ExecuteReader();
+                conexion.desconectar();
+                MessageBox.Show("Eliminación exitosa.");
+                dataGridView.Rows.Clear();
+                dataGridView.Refresh();
+                ActualizarTabla(dataGridView);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

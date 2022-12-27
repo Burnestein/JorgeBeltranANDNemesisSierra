@@ -29,6 +29,9 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TbxFechaVenta = new System.Windows.Forms.TextBox();
             this.LblFechaVenta = new System.Windows.Forms.Label();
             this.BtnLimpiar = new System.Windows.Forms.Button();
@@ -40,17 +43,17 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.TbxCantidad = new System.Windows.Forms.TextBox();
             this.LblCantidad = new System.Windows.Forms.Label();
             this.DgvVentas = new System.Windows.Forms.DataGridView();
+            this.CbxProductos = new System.Windows.Forms.ComboBox();
+            this.BtnSeleccionar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TbxUsername = new System.Windows.Forms.TextBox();
+            this.LblUsername = new System.Windows.Forms.Label();
             this.colonia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apepat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apemat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.domicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CbxProductos = new System.Windows.Forms.ComboBox();
-            this.BtnSeleccionar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TbxUsername = new System.Windows.Forms.TextBox();
-            this.LblUsername = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +62,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.TbxFechaVenta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.TbxFechaVenta.Enabled = false;
             this.TbxFechaVenta.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TbxFechaVenta.Location = new System.Drawing.Point(559, 68);
             this.TbxFechaVenta.Name = "TbxFechaVenta";
@@ -110,6 +114,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.TbxNomCliente.Name = "TbxNomCliente";
             this.TbxNomCliente.Size = new System.Drawing.Size(204, 23);
             this.TbxNomCliente.TabIndex = 51;
+            this.TbxNomCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxNomCliente_KeyPress);
             // 
             // TbxTotal
             // 
@@ -153,6 +158,7 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.TbxCantidad.Name = "TbxCantidad";
             this.TbxCantidad.Size = new System.Drawing.Size(70, 23);
             this.TbxCantidad.TabIndex = 44;
+            this.TbxCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxCantidad_KeyPress);
             // 
             // LblCantidad
             // 
@@ -169,6 +175,16 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             // 
             // DgvVentas
             // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.DgvVentas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvVentas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colonia,
@@ -177,16 +193,80 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             this.apemat,
             this.iva,
             this.domicilio});
-            this.DgvVentas.Location = new System.Drawing.Point(92, 276);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvVentas.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DgvVentas.Location = new System.Drawing.Point(43, 241);
             this.DgvVentas.Name = "DgvVentas";
-            this.DgvVentas.Size = new System.Drawing.Size(646, 150);
+            this.DgvVentas.Size = new System.Drawing.Size(768, 150);
             this.DgvVentas.TabIndex = 62;
             this.DgvVentas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvVentas_CellClick);
+            // 
+            // CbxProductos
+            // 
+            this.CbxProductos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbxProductos.FormattingEnabled = true;
+            this.CbxProductos.Items.AddRange(new object[] {
+            ""});
+            this.CbxProductos.Location = new System.Drawing.Point(413, 195);
+            this.CbxProductos.Name = "CbxProductos";
+            this.CbxProductos.Size = new System.Drawing.Size(185, 25);
+            this.CbxProductos.TabIndex = 66;
+            // 
+            // BtnSeleccionar
+            // 
+            this.BtnSeleccionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSeleccionar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.BtnSeleccionar.Location = new System.Drawing.Point(717, 184);
+            this.BtnSeleccionar.Name = "BtnSeleccionar";
+            this.BtnSeleccionar.Size = new System.Drawing.Size(94, 34);
+            this.BtnSeleccionar.TabIndex = 67;
+            this.BtnSeleccionar.Text = "Agregar";
+            this.BtnSeleccionar.UseVisualStyleBackColor = true;
+            this.BtnSeleccionar.Click += new System.EventHandler(this.BtnSeleccionar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.label1.Location = new System.Drawing.Point(410, 163);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 17);
+            this.label1.TabIndex = 68;
+            this.label1.Text = "Selecciona un producto:";
+            // 
+            // TbxUsername
+            // 
+            this.TbxUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TbxUsername.Enabled = false;
+            this.TbxUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TbxUsername.Location = new System.Drawing.Point(192, 100);
+            this.TbxUsername.Name = "TbxUsername";
+            this.TbxUsername.Size = new System.Drawing.Size(204, 23);
+            this.TbxUsername.TabIndex = 70;
+            // 
+            // LblUsername
+            // 
+            this.LblUsername.AutoSize = true;
+            this.LblUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.LblUsername.Location = new System.Drawing.Point(12, 100);
+            this.LblUsername.Name = "LblUsername";
+            this.LblUsername.Size = new System.Drawing.Size(75, 17);
+            this.LblUsername.TabIndex = 69;
+            this.LblUsername.Text = "Username:";
             // 
             // colonia
             // 
             this.colonia.HeaderText = "Producto";
             this.colonia.Name = "colonia";
+            this.colonia.Width = 215;
             // 
             // apepat
             // 
@@ -212,57 +292,6 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             // 
             this.domicilio.HeaderText = "Total";
             this.domicilio.Name = "domicilio";
-            // 
-            // CbxProductos
-            // 
-            this.CbxProductos.FormattingEnabled = true;
-            this.CbxProductos.Location = new System.Drawing.Point(440, 195);
-            this.CbxProductos.Name = "CbxProductos";
-            this.CbxProductos.Size = new System.Drawing.Size(121, 21);
-            this.CbxProductos.TabIndex = 66;
-            // 
-            // BtnSeleccionar
-            // 
-            this.BtnSeleccionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnSeleccionar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.BtnSeleccionar.Location = new System.Drawing.Point(717, 184);
-            this.BtnSeleccionar.Name = "BtnSeleccionar";
-            this.BtnSeleccionar.Size = new System.Drawing.Size(94, 34);
-            this.BtnSeleccionar.TabIndex = 67;
-            this.BtnSeleccionar.Text = "Seleccionar";
-            this.BtnSeleccionar.UseVisualStyleBackColor = true;
-            this.BtnSeleccionar.Click += new System.EventHandler(this.BtnSeleccionar_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.label1.Location = new System.Drawing.Point(437, 163);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 17);
-            this.label1.TabIndex = 68;
-            this.label1.Text = "Selecciona un producto:";
-            // 
-            // TbxUsername
-            // 
-            this.TbxUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TbxUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.TbxUsername.Location = new System.Drawing.Point(192, 100);
-            this.TbxUsername.Name = "TbxUsername";
-            this.TbxUsername.Size = new System.Drawing.Size(204, 23);
-            this.TbxUsername.TabIndex = 70;
-            // 
-            // LblUsername
-            // 
-            this.LblUsername.AutoSize = true;
-            this.LblUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.LblUsername.Location = new System.Drawing.Point(12, 100);
-            this.LblUsername.Name = "LblUsername";
-            this.LblUsername.Size = new System.Drawing.Size(75, 17);
-            this.LblUsername.TabIndex = 69;
-            this.LblUsername.Text = "Username:";
             // 
             // FrmVentas
             // 
@@ -308,14 +337,14 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         private System.Windows.Forms.DataGridView DgvVentas;
         private System.Windows.Forms.ComboBox CbxProductos;
         private System.Windows.Forms.Button BtnSeleccionar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox TbxUsername;
+        private System.Windows.Forms.Label LblUsername;
         private System.Windows.Forms.DataGridViewTextBoxColumn colonia;
         private System.Windows.Forms.DataGridViewTextBoxColumn apepat;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn apemat;
         private System.Windows.Forms.DataGridViewTextBoxColumn iva;
         private System.Windows.Forms.DataGridViewTextBoxColumn domicilio;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TbxUsername;
-        private System.Windows.Forms.Label LblUsername;
     }
 }

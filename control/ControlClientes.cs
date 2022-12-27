@@ -93,30 +93,7 @@ namespace JorgeBeltranANDNemesisSierra.control
             }
         }
         
-        public void llenaCombo(ComboBox combo)
-        {
-            try
-            {
-                Query = new MySqlCommand(
-                    "Select * from tblusuarios",
-                    conectar());
-                Query.Prepare();
-
-                consultar = Query.ExecuteReader();
-                while (consultar.Read())
-                {
-                    combo.Items.Add(consultar["usuario"].ToString());
-                }
-            }
-            catch (MySqlException e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            finally
-            {
-                desconectar();
-            }
-        }//Método para llenar box
+       //Método para llenar box
         //----------------------------------------------------------------------------------
         //Método para actualizar la tabla de clientes.
         //----------------------------------------------------------------------------------
@@ -150,6 +127,29 @@ namespace JorgeBeltranANDNemesisSierra.control
             {
                 desconectar();
             }
+        }
+    
+        public void EliminarSelc(int idBorrar, DataGridView dataGridView)
+        {
+            conectar();
+            string query = "delete from tblclientes where id='" + idBorrar + "';";
+            MySqlCommand command = new MySqlCommand(query, Conexion.con);
+            command.CommandTimeout = 60;
+            MySqlDataReader reader;
+            try
+            {
+                reader = command.ExecuteReader();
+                desconectar();
+                MessageBox.Show("Eliminación exitosa.");
+                dataGridView.Rows.Clear();
+                dataGridView.Refresh();
+                llenartablaClientes(dataGridView);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }   
 

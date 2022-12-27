@@ -80,8 +80,8 @@ namespace JorgeBeltranANDNemesisSierra.vistas
             idSel = DgvProductos.Rows[sel].Cells[0].Value.ToString();
             TbxID.Text = DgvProductos.Rows[sel].Cells[0].Value.ToString();
             TbxNombreProd.Text = DgvProductos.Rows[sel].Cells[1].Value.ToString();
-            TbxPrecioVenta.Text = DgvProductos.Rows[sel].Cells[2].Value.ToString();
-            TbxPrecioCompra.Text = DgvProductos.Rows[sel].Cells[3].Value.ToString();
+            TbxPrecioCompra.Text = DgvProductos.Rows[sel].Cells[2].Value.ToString();
+            TbxPrecioVenta.Text = DgvProductos.Rows[sel].Cells[3].Value.ToString();
             TbxCodigo.Text = DgvProductos.Rows[sel].Cells[4].Value.ToString();
             TbxDescripcion.Text = DgvProductos.Rows[sel].Cells[5].Value.ToString();
         }
@@ -190,16 +190,35 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         //----------------------------------------------------------------------------------
         private void menuclick(object sender, ToolStripItemClickedEventArgs e)
         {
-            string idnombre = e.ClickedItem.Name.ToString();
-            if (idnombre.Contains("Borrar"))
+            string id2 = e.ClickedItem.Name.ToString();
+            string idSel = "";
+            if (id2.Contains("Borrar"))
             {
-                idnombre.Replace("Borrar", "");
-            }if (idnombre.Contains("Mostrar"))
+                id2 = id2.Replace("Borrar", "");
+                idSel = DgvProductos.Rows[int.Parse(id2)].Cells[0].Value.ToString();
+                Borrar(int.Parse(idSel));
+            }if (id2.Contains("Mostrar"))
             {
-                idnombre.Replace("Mostrar", "");
+                id2 = id2.Replace("Mostrar", "");
+                Mostrar(int.Parse(id2));
             }
         }
-        //----------------------------------------------------------------------------------
+        //Mostrar MessageBox con la información del producto.
+        private void Mostrar(int idMostrar)
+        {
+            String res = "ID del producto = " + DgvProductos.Rows[idMostrar].Cells[0].Value.ToString() + "\n";
+            res = res + "Nombre del producto = " + DgvProductos.Rows[idMostrar].Cells[1].Value.ToString() + "\n";
+            res = res + "Precio de Compra = " + DgvProductos.Rows[idMostrar].Cells[2].Value.ToString() + "\n";
+            res = res + "Precio de Venta = " + DgvProductos.Rows[idMostrar].Cells[3].Value.ToString() + "\n";
+            res = res + "Código del producto = " + DgvProductos.Rows[idMostrar].Cells[4].Value.ToString() + "\n";
+            res = res + "Descripción del producto = " + DgvProductos.Rows[idMostrar].Cells[5].Value.ToString() + "\n";
+            MessageBox.Show(res);
+        }
+
+        private void Borrar(int idBorrar)
+        {
+          controlprod.EliminarSelc(idBorrar, DgvProductos);            
+        }
         //Limpiar los campos de texto.
         //----------------------------------------------------------------------------------
         private void BtnLimpiar_Click(object sender, EventArgs e)
@@ -216,6 +235,30 @@ namespace JorgeBeltranANDNemesisSierra.vistas
         {
             FrmReporteProductos produ = new FrmReporteProductos();
             produ.ShowDialog();
+        }
+        
+        private void TbxNombreProd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            /*
+            if (e.KeyChar >= 31 && e.KeyChar <= 64 || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }*/
+            Validar.SoloLetras(e);
+        }
+
+        private void TbxCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            /*
+            if (e.KeyChar >= 32 && e.KeyChar <= 47 || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }*/
+            Validar.SoloNumeros(e);
         }
     }
 }
